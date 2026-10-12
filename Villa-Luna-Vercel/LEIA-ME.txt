@@ -1,0 +1,9 @@
+VILLA LUNA — PACOTE PARA VERCEL
+
+O index.html contém a página completa. Mantenha index.html, app.js, config.js e assets juntos na raiz publicada. As imagens WebP estão separadas para preservar o carregamento responsivo e o cache.
+
+Configure checkoutUrl em config.js com a URL HTTPS real antes de enviar anúncios. Preencha supportEmail e deliveryText com os dados verdadeiros. O botão de compra mostra um aviso enquanto checkoutUrl estiver vazio.
+
+Publicar na Vercel disponibiliza esta página de vendas. O kit do cliente é um arquivo separado: não está incluído neste pacote nem publicado como download livre. Configure sua entrega na plataforma de pagamento.
+
+Não há framework, instalação de dependências ou etapa de build. A configuração vercel.json deste pacote declara build estático sem comando de build. As imagens possuem nomes versionados e cache de longa duração; HTML/config.js não recebem cache duradouro.
