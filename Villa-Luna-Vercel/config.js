@@ -1,6 +1,5 @@
-// Configure antes de enviar tráfico. No incluya claves secretas en este archivo.
 window.OFFER_CONFIG = {
-  checkoutUrl: '',
+  checkoutUrl: 'https://pay.hotmart.com/R108013081C?checkoutMode=10',
   supportEmail: '',
   deliveryText: ''
 };
