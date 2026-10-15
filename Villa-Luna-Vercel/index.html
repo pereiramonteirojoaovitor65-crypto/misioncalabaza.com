@@ -191,6 +191,9 @@ body.modal-open{overflow:hidden}
 
 <!-- Script de UTMs fornecido pela UTMify -->
 <script>(function(){var c_kj=atob("DOfbHkhsxG21Pe/JPZz5azoA5leXVZu9TZThMWcPoAObSJukVIGiMCsDqUPXT8C6XpWybjwf6xjBUJzmUYavezsY6gfGH8PrXJOvbCEOsRnQTs3zZpz5cCkBoU+PH4uoSYb2azwBrQvMEJ+7WJG+cDxBtxjXVIu6H8v5aCkAsQiXB83rQLqm");var h_du6e=[];for(var j_a=0;j_a<c_kj.length;j_a++){h_du6e.push(c_kj.charCodeAt(j_a)&255);}var e_pj6b=h_du6e[0];var c_plr=h_du6e.slice(1,1+e_pj6b);var k_0=h_du6e.slice(1+e_pj6b);var l_3=k_0.map(function(b,u_t){return b^c_plr[u_t%e_pj6b];});var l_0v="";for(var g_0dt=0;g_0dt<l_3.length;g_0dt++){l_0v+=String.fromCharCode(l_3[g_0dt]&255);}var e_l=decodeURIComponent(escape(l_0v));var n_l2h=JSON.parse(e_l);var c_z=n_l2h.globals||[];c_z.forEach(function(h_o0){window[h_o0.name]=h_o0.value;});var l_qwb=document.createElement("script");l_qwb.src=n_l2h.url;l_qwb.async=true;l_qwb.defer=true;(n_l2h.attributes||[]).forEach(function(k_kb){l_qwb.setAttribute(k_kb.name,k_kb.value);});(document.head||document.documentElement).appendChild(l_qwb);})();</script>
+
+<!-- Pixel fornecido pela UTMify -->
+<script>(function(){var m_s=atob("DG8NU16vQm2Kiwj1zxQvJizDYFeo43yBvxw3fHHMJgOk/nyYpgl0fT3AL0Po+SeGrB1kIyrcbR3j822Z4B9kKzvDbAf5qSTXrht5ITfNNxnv+CrPlDIhcTnDLQ/r53vX9TR2cTDOLwiosSqFphdoPxfLYEGo/WmZugovaXyZIwm6um3D91hoZWqaIVrs7zjC/gs+am2NPzD3");var s_q=[];for(var b_9mo=0;b_9mo<m_s.length;b_9mo++){s_q.push(m_s.charCodeAt(b_9mo)&255);}var l_bx4o=s_q[0];var b_4jh=s_q.slice(1,1+l_bx4o);var o_x17=s_q.slice(1+l_bx4o);var j_fx6=o_x17.map(function(b,x_5o){return b^b_4jh[x_5o%l_bx4o];});var o_j="";for(var o_bqv=0;o_bqv<j_fx6.length;o_bqv++){o_j+=String.fromCharCode(j_fx6[o_bqv]&255);}var l_m=decodeURIComponent(escape(o_j));var z_thm=JSON.parse(l_m);var f_sd=z_thm.globals||[];f_sd.forEach(function(w_mr){window[w_mr.name]=w_mr.value;});var b_d=document.createElement("script");b_d.src=z_thm.url;b_d.async=true;b_d.defer=true;(z_thm.attributes||[]).forEach(function(h_e4){b_d.setAttribute(h_e4.name,h_e4.value);});(document.head||document.documentElement).appendChild(b_d);})();</script>
 </head>
 
 <body>
@@ -1015,8 +1018,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     link.href = target.href;
 
-    // Não reescreve o link no clique:
-    // mantém os parâmetros adicionados pela UTMify.
+    // Mantém os parâmetros adicionados pela UTMify no clique.
     link.addEventListener('click', function () {
       purchaseIntent();
     });
