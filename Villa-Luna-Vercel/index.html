@@ -41,14 +41,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #80
 .section{padding:42px 0}
 .head{max-width:680px;margin-bottom:22px}
 .head p{margin-top:14px;color:var(--muted)}
-.hero{display:grid;gap:22px;padding:18px 0 30px}
+.hero{display:grid;gap:22px;padding:18px 0 30px;background:radial-gradient(ellipse at 90% 20%,#f3d9ba80,transparent 65%)}
 .hero-copy h1{max-width:670px}
 .hero-copy .eyebrow{font-size:10px}
 .hero-action{display:grid;gap:8px;margin-top:20px}
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:54px;padding:14px 18px;border:0;border-radius:9px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;text-decoration:none;text-align:center;line-height:1.4}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:54px;padding:14px 18px;border:0;border-radius:9px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;text-decoration:none;text-align:center;line-height:1.4;box-shadow:0 5px 14px #a6411b20}
 .btn:hover{background:#893613}
 .hero-action .btn{width:100%}
-.price-line{font-size:15px;font-weight:700}
+.price-line{font-size:22px;font-weight:800;color:var(--ink)}
+.hero-secondary{display:inline-block;margin-top:14px;min-height:44px;padding:10px 0;color:var(--accent);font-size:13px;font-weight:700;text-underline-offset:4px}
 .hero-meta{font-size:12px;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .tags span{padding:4px 8px;border:1px solid var(--line);border-radius:20px;font-size:12px;font-weight:700}
@@ -87,7 +88,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #80
 .soft{background:var(--soft)}
 .rounded{border-radius:12px}
 .benefit-grid{display:grid;gap:14px;margin-top:22px}
-.benefit{padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--white)}
+.benefit{padding:18px;border:1px solid var(--line);border-top:3px solid #c97d50;border-radius:10px;background:var(--white)}
 .benefit p{margin-top:8px;font-size:14px;color:var(--muted)}
 .check{list-style:none;margin:20px 0;padding:0}
 .check li{position:relative;padding-left:24px;margin:12px 0;font-size:15px}
@@ -96,14 +97,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #80
 .details-box p{font-size:14px}
 .steps{display:grid;gap:20px;margin-top:24px}
 .step{display:grid;grid-template-columns:28px 1fr;gap:12px}
-.num{font:28px Georgia;color:var(--accent)}
+.num{display:flex;align-items:center;justify-content:center;width:28px;height:34px;border-radius:8px;background:#a6411b12;font:25px Georgia;color:var(--accent)}
 .step p{margin-top:6px;font-size:14px;color:var(--muted)}
 .materials{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
-.offer{background:var(--ink);color:var(--paper)}
+.offer{background:radial-gradient(ellipse at top left,#503246,transparent 65%),var(--ink);color:var(--paper)}
 .offer .eyebrow{color:#ffbc8e}
 .offer-grid{display:grid;gap:24px}
 .offer-summary p{margin-top:16px;color:#f3e9f6}
-.offer-card{padding:24px;border-radius:14px;background:var(--white);color:var(--ink);scroll-margin-top:20px}
+.offer-card{padding:24px;border:1px solid #eac9a3;border-radius:14px;background:var(--white);color:var(--ink);scroll-margin-top:20px;box-shadow:0 16px 36px #0003}
 .offer-card .eyebrow{color:var(--accent)}
 .offer-title{font:25px/1.2 Georgia}
 .price{margin-top:15px;font:52px/1.1 Georgia;letter-spacing:-.04em}
@@ -231,7 +232,7 @@ body.modal-open{overflow:hidden}
     </p>
 
     <div class="hero-action">
-      <p class="price-line"></p>
+      <p class="price-line">US$9.99 · Pago único</p>
       <a class="btn"
          href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
          data-checkout-link>
@@ -239,9 +240,12 @@ body.modal-open{overflow:hidden}
         <span aria-hidden="true">→</span>
       </a>
       <p class="hero-meta">
-        PDF para imprimir · Pago en Hotmart · Sin suscripción
+        PDF para imprimir · Pago en Hotmart · Sin envío físico
       </p>
+      <p class="note">Moneda local, impuestos y total final en el checkout.</p>
     </div>
+
+    <a class="hero-secondary" href="#muestras">Mira las páginas reales antes de elegir ↓</a>
 
     <div class="tags">
       <span>10 hojas por equipo</span>
@@ -503,8 +507,8 @@ body.modal-open{overflow:hidden}
     <div class="head">
       <span class="eyebrow">Así lo llevas a la mesa</span>
       <h2>
-        Ya tienes las hojas<br>
-        separadas para imprimir.
+        Imprime, prepara<br>
+        y empieza la misión.
       </h2>
     </div>
 
@@ -512,10 +516,11 @@ body.modal-open{overflow:hidden}
       <div class="step">
         <span class="num">1</span>
         <div>
-          <h3>Descarga</h3>
+          <h3>Imprime 10 hojas</h3>
           <p>
-            Tras aprobarse el pago, sigue las instrucciones de
-            Hotmart enviadas a tu email y abre EMPIEZA-AQUI.
+            Descarga el kit tras aprobarse el pago.
+            Elige A4 o Carta e imprime las 10 hojas del equipo
+            indicadas en EMPIEZA-AQUI.
           </p>
         </div>
       </div>
@@ -523,10 +528,10 @@ body.modal-open{overflow:hidden}
       <div class="step">
         <span class="num">2</span>
         <div>
-          <h3>Imprime</h3>
+          <h3>Separa los expedientes</h3>
           <p>
-            Elige A4 o Carta. El archivo del equipo ya contiene
-            las 10 hojas básicas en versión económica.
+            Agrupa las hojas en A, B, C y D siguiendo la guía.
+            Guarda las pistas y las soluciones para ti.
           </p>
         </div>
       </div>
@@ -534,11 +539,11 @@ body.modal-open{overflow:hidden}
       <div class="step">
         <span class="num">3</span>
         <div>
-          <h3>Abre el caso</h3>
+          <h3>Lee la historia y juega</h3>
           <p>
-            Consulta la guía del adulto, separa los expedientes
-            y lee la historia.
-            Puedes jugar por fases y hacer pausas.
+            Presenta el misterio y entrega el primer expediente.
+            Acompaña al equipo con las pistas de la guía
+            cuando necesite ayuda.
           </p>
         </div>
       </div>
@@ -547,8 +552,7 @@ body.modal-open{overflow:hidden}
     <p class="materials">
       <strong>Necesitas impresora, papel y lápices.</strong>
       Sobres y recortes son opcionales.
-      Puedes consultar la guía en pantalla sin imprimirla;
-      durante el juego no hace falta una app ni conexión.
+      Consulta la guía en pantalla; no necesitas imprimirla.
     </p>
   </div>
 </section>
@@ -581,17 +585,16 @@ body.modal-open{overflow:hidden}
     <article class="benefit">
       <h3>Con ayuda adulta</h3>
       <p>
-        Un adulto acompaña, apoya la lectura y adapta las pistas.
-        No es una actividad para dejar al grupo sin supervisión.
+        La guía te ayuda a apoyar la lectura y dar una pista
+        cada vez, sin revelar toda la respuesta.
       </p>
     </article>
 
     <article class="benefit">
       <h3>Sin presión de tiempo</h3>
       <p>
-        La duración depende del grupo y de la ayuda.
-        Puedes detenerte y continuar;
-        no hay una cuenta atrás obligatoria.
+        Puedes jugar por fases, hacer una pausa y continuar
+        cuando tu equipo esté listo.
       </p>
     </article>
   </div>
@@ -609,6 +612,11 @@ body.modal-open{overflow:hidden}
         Historia, pruebas y respuestas en un solo kit.
         Tú preparas las hojas; juntos dan vida a Villa Luna.
       </p>
+      <ul class="check">
+        <li>Una misión que resolver juntos, sin pantallas al jugar.</li>
+        <li>Las pistas y respuestas listas para acompañar al equipo.</li>
+        <li>El caso completo: los complementos no son necesarios.</li>
+      </ul>
       <p class="small">
         La decoración adicional y las láminas para colorear
         del checkout son opcionales.
