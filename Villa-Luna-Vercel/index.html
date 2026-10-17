@@ -8,186 +8,41 @@
 <meta name="description" content="Una misión de detectives para compartir en Halloween. PDF en español con guía, pistas y soluciones. Imprime 10 hojas por equipo. US$9.99, pago único.">
 
 <style>
-:root{
-  --ink:#241c31;--paper:#fbf6ed;--accent:#a6411b;
-  --muted:#514653;--line:#dfd4c5;--soft:#f0e8dc;--white:#fffdf9;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:22px}
-body{margin:0;padding-bottom:90px;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}
-h1,h2,h3,p,figure{margin:0}
-h1,h2{font-family:Georgia,serif;letter-spacing:-.035em;line-height:1.1;font-weight:400}
-h1{font-size:clamp(36px,9.4vw,60px)}
-h2{font-size:clamp(29px,7.5vw,43px)}
-h3{font-size:18px;line-height:1.35}
-p+p{margin-top:12px}
-a{color:inherit}
-img{display:block;width:100%;height:auto}
-picture{display:block;min-width:0}
-button{font:inherit;cursor:pointer}
-a,button,summary{-webkit-tap-highlight-color:transparent}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8060b6;outline-offset:4px}
-.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
-.top{padding:6px 12px;background:var(--ink);color:#fff;text-align:center;font-size:11px;letter-spacing:.07em}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:60px}
-.brand{font-weight:900;letter-spacing:.14em;font-size:14px;text-decoration:none}
-.navlink{font-weight:700;font-size:13px;text-decoration:none;border-bottom:1px solid}
-.eyebrow{display:block;margin-bottom:10px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--accent)}
-.accent{color:var(--accent)}
-.intro{margin-top:16px;font-size:17px;color:var(--muted)}
-.muted{color:var(--muted)}
-.small{font-size:13px}
-.note{margin-top:10px;font-size:12px;line-height:1.55;color:var(--muted)}
-.section{padding:42px 0}
-.head{max-width:680px;margin-bottom:22px}
-.head p{margin-top:14px;color:var(--muted)}
-.hero{display:grid;gap:22px;padding:18px 0 30px;background:radial-gradient(ellipse at 90% 20%,#f3d9ba80,transparent 65%)}
-.hero-copy h1{max-width:670px}
-.hero-copy .eyebrow{font-size:10px}
-.hero-action{display:grid;gap:8px;margin-top:20px}
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:54px;padding:14px 18px;border:0;border-radius:9px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;text-decoration:none;text-align:center;line-height:1.4;box-shadow:0 5px 14px #a6411b20}
-.btn:hover{background:#893613}
-.hero-action .btn{width:100%}
-.price-line{font-size:22px;font-weight:800;color:var(--ink)}
-.hero-secondary{display:inline-block;margin-top:14px;min-height:44px;padding:10px 0;color:var(--accent);font-size:13px;font-weight:700;text-underline-offset:4px}
-.hero-meta{font-size:12px;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
-.tags span{padding:4px 8px;border:1px solid var(--line);border-radius:20px;font-size:12px;font-weight:700}
-.hero-media{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center;max-width:440px;width:100%;margin-inline:auto}
-.hero-media picture{width:min(100%,340px);margin-inline:auto}
-.hero-media img{width:100%;height:auto;border-radius:10px}
-.hero-media h3{margin-top:16px;font-size:20px;line-height:1.3;font-family:Georgia,serif}
-.hero-media p{margin-top:9px;font-size:13px;color:var(--muted)}
-.trustline{border-block:1px solid var(--line);background:var(--soft)}
-.trustline .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-block:17px;text-align:center}
-.trustline strong{display:block;font-size:15px;line-height:1.3}
-.trustline span{display:block;margin-top:5px;font-size:11px;line-height:1.4;color:var(--muted)}
-.proof-grid,.split{display:grid;gap:24px;align-items:center}
-.proof-real{padding:18px;background:#fff;border:1px solid var(--line);border-radius:12px;text-align:center}
-.proof-real img{box-shadow:0 2px 10px #241c3120}
-.proof-real button{padding:0;border:0;background:none}
-.proof-real>button{display:block;width:min(100%,340px);margin:0 auto 18px}
-.proof-real h3{font-size:19px}
-.proof-real p{margin-top:8px;font-size:14px}
-.tap{display:block;margin:10px auto 0;min-height:44px;padding:10px 14px!important;color:var(--accent);font-size:12px;font-weight:700}
-.demo{padding:19px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
-.demo h3{font-size:19px}
-.demo p{margin-top:12px;font-size:14px}
-.demo-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:15px}
-.demo-options button{min-height:46px;border:1px solid #b6a5c4;border-radius:7px;background:var(--white);color:var(--ink);font-weight:700}
-.demo-options button[aria-pressed="true"]{background:var(--ink);color:white}
-.demo-result{min-height:46px}
-.demo .note{font-size:12px}
-.gallery{display:flex;gap:14px;margin-top:20px;padding-bottom:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-.preview{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--ink);min-width:0}
-.gallery .preview{display:block;flex:0 0 86%;max-width:340px;margin:0;padding:12px;scroll-snap-align:start}
-.preview span{display:block;margin-top:12px;font-size:14px;font-weight:700;line-height:1.4}
-.preview img{width:100%;height:auto}
-.inline-action{margin-top:23px}
-.inline-action .btn{width:100%}
-.soft{background:var(--soft)}
-.rounded{border-radius:12px}
-.benefit-grid{display:grid;gap:14px;margin-top:22px}
-.benefit{padding:18px;border:1px solid var(--line);border-top:3px solid #c97d50;border-radius:10px;background:var(--white)}
-.benefit p{margin-top:8px;font-size:14px;color:var(--muted)}
-.check{list-style:none;margin:20px 0;padding:0}
-.check li{position:relative;padding-left:24px;margin:12px 0;font-size:15px}
-.check li:before{content:"✓";position:absolute;left:0;font-weight:900;color:var(--accent)}
-.details-box{margin-top:20px;padding-left:17px;border-left:3px solid var(--accent)}
-.details-box p{font-size:14px}
-.steps{display:grid;gap:20px;margin-top:24px}
-.step{display:grid;grid-template-columns:28px 1fr;gap:12px}
-.num{display:flex;align-items:center;justify-content:center;width:28px;height:34px;border-radius:8px;background:#a6411b12;font:25px Georgia;color:var(--accent)}
-.step p{margin-top:6px;font-size:14px;color:var(--muted)}
-.materials{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
-.offer{background:radial-gradient(ellipse at top left,#503246,transparent 65%),var(--ink);color:var(--paper)}
-.offer .eyebrow{color:#ffbc8e}
-.offer-grid{display:grid;gap:24px}
-.offer-summary p{margin-top:16px;color:#f3e9f6}
-.offer-card{padding:24px;border:1px solid #eac9a3;border-radius:14px;background:var(--white);color:var(--ink);scroll-margin-top:20px;box-shadow:0 16px 36px #0003}
-.offer-card .eyebrow{color:var(--accent)}
-.offer-title{font:25px/1.2 Georgia}
-.price{margin-top:15px;font:52px/1.1 Georgia;letter-spacing:-.04em}
-.price span{font:12px Arial;letter-spacing:0}
-.offer-card p{margin-top:10px;font-size:13px;color:var(--muted)}
-.offer-card .btn{width:100%;margin-top:8px}
-.offer-card .payment{font-size:13px;font-weight:700;color:var(--ink)}
-.offer-facts{margin-top:18px;padding-top:10px;border-top:1px solid var(--line)}
-.offer-card .tax-note{font-size:11px}
-.faq{max-width:780px}
-details{padding:17px 0;border-bottom:1px solid var(--line)}
-summary{cursor:pointer;min-height:32px;font-size:15px;font-weight:700;line-height:1.5}
-details p{margin-top:12px;font-size:14px;color:var(--muted)}
-.closing{text-align:center;max-width:700px}
-.closing p{margin-top:16px;color:var(--muted)}
-.closing .btn{width:100%;margin-top:22px}
-footer{padding:25px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-.footer-grid{display:grid;gap:18px}
-.footer-grid p{margin:0}
-.footer-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
-.sticky[hidden]{display:none}
-.sticky{position:fixed;inset-inline:0;bottom:0;z-index:20;padding:9px 16px calc(9px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fffdf9fa}
-.sticky-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1080px;margin:auto}
-.sticky strong{display:block;font-size:19px;line-height:1.3}
-.sticky small{display:block;font-size:11px;color:var(--muted)}
-.sticky .btn{min-height:47px;padding:10px 15px;font-size:13px}
-.skip{position:absolute;top:-100px}
-.skip:focus{top:0;z-index:50;padding:12px;background:#fff}
-dialog{width:min(94vw,760px);max-height:92dvh;padding:16px;border:0;border-radius:12px;background:var(--paper)}
-dialog::backdrop{background:#171021cc}
-dialog img{width:auto;max-width:100%;max-height:75dvh;margin:auto}
-.close{display:block;min-height:44px;margin:0 0 12px auto;padding:9px 14px;border:1px solid var(--line);border-radius:6px;background:#fff}
-body.modal-open{overflow:hidden}
-#checkoutDialog{max-width:430px}
-.separator{border-top:1px solid var(--line)}
 
-@media(min-width:650px){
-  .benefit-grid{grid-template-columns:repeat(3,1fr)}
-  .steps{grid-template-columns:repeat(3,1fr)}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .inline-action .btn,.closing .btn{width:auto}
-}
-@media(min-width:900px){
-  body{padding-bottom:0}
-  .wrap{width:min(1080px,calc(100% - 80px))}
-  .nav{min-height:72px}
-  .hero{grid-template-columns:1.2fr .8fr;align-items:center;gap:52px;padding:38px 0 48px}
-  .hero-action{max-width:460px}
-  .hero-media{max-width:none;padding:20px}
-  .hero-media img{max-height:350px;object-fit:contain}
-  .hero-media h3{margin-top:15px;font-size:17px}
-  .section{padding:65px 0}
-  .proof-grid{grid-template-columns:1fr 1fr;align-items:stretch;gap:30px}
-  .proof-real{display:grid;grid-template-columns:160px 1fr;gap:15px;align-items:center;text-align:left;padding:14px}
-  .proof-real>button{margin:0}
-  .proof-real h3{font-size:16px}
-  .proof-real p{font-size:13px}
-  .proof-real .tap{margin-inline:0}
-  .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow:visible}
-  .gallery .preview{max-width:none;width:100%}
-  .split{grid-template-columns:1fr 1fr;gap:45px}
-  .offer-grid{grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
-  .offer-card{padding:32px}
-  .sticky{display:none}
-  .hero-copy .eyebrow{font-size:12px}
-  .top{font-size:12px}
-  .trustline span{font-size:13px}
-  .trustline strong{font-size:18px}
-  .hero-meta{font-size:13px}
-}
-@media(max-width:899px){
-  .hero-action .btn{min-height:56px;font-size:16px}
-}
-@media(max-width:355px){
-  .wrap{width:calc(100% - 28px)}
-  .hero-media{padding:12px}
-  .offer-card{padding:20px}
-  .sticky{padding-inline:12px}
-  .sticky .btn{font-size:12px;padding-inline:12px}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
+:root{--ink:#241c31;--paper:#fbf6ed;--accent:#a6411b;--muted:#514653;--line:#dfd4c5;--soft:#f0e8dc;--white:#fffdf9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;padding-bottom:88px;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}
+h1,h2,h3,p,figure{margin:0}
+h1,h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.035em;line-height:1.12;text-wrap:balance}
+h1{font-size:clamp(35px,9vw,60px)}h2{font-size:clamp(29px,7.4vw,43px)}h3{font-size:18px;line-height:1.35}
+p+p{margin-top:12px}a{color:inherit}img{display:block;width:100%;height:auto}picture{display:block;min-width:0}button{font:inherit;cursor:pointer}
+a,button,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8060b6;outline-offset:4px}
+.wrap{width:min(1080px,calc(100% - 36px));margin:auto}.top{padding:7px 12px;background:var(--ink);color:var(--paper);text-align:center;font-size:11px;letter-spacing:.08em}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px}.brand{font-weight:900;letter-spacing:.14em;font-size:14px;text-decoration:none}.navlink{font-size:13px;font-weight:700;text-underline-offset:5px}
+.eyebrow{display:block;margin-bottom:12px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.accent{color:var(--accent)}.intro{margin-top:18px;font-size:17px;color:var(--muted)}.small{font-size:13px}.note{margin-top:10px;font-size:12px;line-height:1.5;color:var(--muted)}
+.section{padding:42px 0}.head{max-width:700px;margin-bottom:24px}.head p{margin-top:14px;color:var(--muted)}.soft{background:var(--soft)}.separator{border-top:1px solid var(--line)}
+.hero{display:grid;gap:28px;padding:22px 0 36px}.hero-copy h1{max-width:650px}.hero-action{display:grid;gap:9px;margin-top:22px;max-width:460px}.hero-action p{margin:0}.price-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;font-size:25px;font-weight:800}.price-line span{font-size:13px;font-weight:400}.hero-meta{font-size:12px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 18px;border:0;border-radius:9px;background:var(--accent);color:white;font-size:15px;font-weight:800;text-align:center;text-decoration:none;line-height:1.4;box-shadow:0 5px 14px #a6411b20}.btn:hover{background:#893613}.hero-secondary{display:inline-block;min-height:44px;padding:12px 0;color:var(--accent);font-size:13px;font-weight:700;text-underline-offset:4px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.tags span{padding:4px 9px;border:1px solid var(--line);border-radius:20px;font-size:12px;font-weight:700}
+.hero-media{position:relative;width:100%;max-width:430px;margin:auto;padding:20px;background:linear-gradient(145deg,#382840,#241c31);border:1px solid #57405f;border-radius:16px;color:var(--paper);box-shadow:0 14px 32px #241c3118}.dossier-label{display:flex;justify-content:space-between;gap:12px;margin-bottom:16px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#eac8a6}.sheet-button{display:block;width:min(100%,300px);margin:auto;padding:0;background:var(--paper);border:0;box-shadow:5px 5px 0 #bfa387;border-radius:3px;overflow:hidden}.sheet-button img{width:100%;height:auto}.hero-media figcaption{margin-top:18px;font-size:13px;text-align:center}.hero-media figcaption span{display:block;color:#d7cbdc;font-size:12px;margin-top:4px}
+.case-band{padding:28px 0;background:var(--ink);color:var(--paper)}.case-band .eyebrow{color:#ffc293}.case-band h2{font-size:clamp(25px,6.4vw,35px)}.case-band p{max-width:720px;margin-top:12px;color:#e6dce9;font-size:15px}.case-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;margin:22px 0 0;padding:0}.case-route li{padding-top:10px;border-top:1px solid #746379;font-size:13px}.case-route span{display:block;color:#ffc293;font-size:10px;letter-spacing:.09em;margin-bottom:5px}
+.proof-grid,.split{display:grid;gap:24px;align-items:start}.proof-real{padding:18px;border:1px solid var(--line);background:var(--white);border-radius:12px}.proof-real>button{display:block;width:min(100%,290px);padding:0;margin:auto;border:0;background:none}.proof-real img{box-shadow:0 2px 10px #241c3114}.proof-real h3{margin-top:20px}.proof-real p{font-size:14px;margin-top:8px}.tap{display:inline-block;min-height:44px;padding:12px 0;border:0;background:none;font-size:13px;font-weight:700;color:var(--accent)}
+.evidence-copy h3{font-size:23px;font-family:Georgia,serif;font-weight:400}.evidence-copy>p{margin-top:12px;font-size:15px;color:var(--muted)}.evidence-list{list-style:none;margin:18px 0;padding:0}.evidence-list li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}.evidence-list strong{display:block;color:var(--accent);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.demo{margin-top:22px;border:1px solid #bcaec7;border-radius:10px;padding:0 16px;background:var(--white)}.demo summary{padding:16px 0;font-size:14px}.demo-content{padding-bottom:16px}.demo-content p{font-size:14px;margin-top:10px}.demo-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.demo-options button{min-height:46px;border:1px solid #b6a5c4;border-radius:7px;background:var(--paper);color:var(--ink);font-weight:700}.demo-options button[aria-pressed="true"]{background:var(--ink);color:white}.demo-result{min-height:44px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.preview{display:block;min-width:0;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--soft);color:var(--ink);text-align:left}.preview span{display:block;margin-top:10px;font-size:12px;font-weight:700;line-height:1.4}.preview img{width:100%;height:auto}.inline-action{margin-top:24px}.inline-action .btn{width:100%}
+.rounded{border-radius:12px}.split .check{margin-bottom:0}.split picture{margin-top:4px}.check{list-style:none;padding:0;margin:20px 0}.check li{position:relative;padding-left:24px;margin:12px 0;font-size:15px}.check li:before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:900}
+.benefit-grid{display:grid;gap:14px;margin-top:22px}.benefit{padding:20px;border:1px solid var(--line);border-top:3px solid #c97d50;border-radius:10px;background:var(--white)}.benefit .eyebrow{font-size:10px;margin-bottom:8px}.benefit p{margin-top:10px;font-size:14px;color:var(--muted)}.details-box{margin-top:20px;padding:20px;border:1px dashed #b59c80;border-radius:10px;background:#fffdf966}.details-box p{font-size:14px;margin-top:8px}
+.steps{display:grid;gap:22px;margin-top:24px}.step{display:grid;grid-template-columns:30px 1fr;gap:12px}.num{display:flex;justify-content:center;align-items:center;width:30px;height:34px;border-radius:7px;background:#a6411b12;color:var(--accent);font:25px Georgia}.step p{font-size:14px;color:var(--muted);margin-top:7px}.materials{padding-top:18px;margin-top:24px;border-top:1px solid var(--line);font-size:14px}.fit-note{margin-top:20px;padding:20px;border-left:3px solid var(--accent);background:var(--white)}.fit-note h3{font-size:16px}.fit-note p{margin-top:8px;font-size:14px;color:var(--muted)}
+.offer{background:radial-gradient(ellipse at top left,#503246,transparent 65%),var(--ink);color:var(--paper)}.offer .eyebrow{color:#ffbc8e}.offer-grid{display:grid;gap:26px}.offer-summary p{margin-top:16px;color:#f3e9f6}.offer-summary .check li:before{color:#ffbc8e}.offer-card{padding:24px;border:1px solid #eac9a3;border-radius:14px;background:var(--white);color:var(--ink);scroll-margin-top:20px;box-shadow:0 16px 36px #0003}.offer-card .eyebrow{color:var(--accent)}.offer-title{font:26px/1.2 Georgia}.price{margin-top:18px;font:52px/1.1 Georgia;letter-spacing:-.04em}.price span{font:12px Arial;letter-spacing:0}.offer-card p{margin-top:10px;font-size:13px;color:var(--muted)}.offer-card .btn{width:100%;margin-top:8px}.offer-card .payment{font-weight:700;color:var(--ink)}.offer-facts{padding-top:10px;margin-top:18px;border-top:1px solid var(--line)}.offer-card .tax-note{font-size:12px}
+.faq{max-width:780px}details{padding:16px 0;border-bottom:1px solid var(--line)}summary{cursor:pointer;min-height:32px;font-size:15px;font-weight:700;line-height:1.5}details p{font-size:14px;margin-top:12px;color:var(--muted)}details a{text-underline-offset:3px}.closing{text-align:center;max-width:730px}.closing p{color:var(--muted);margin-top:16px}.closing .btn{width:100%;margin-top:22px}
+footer{padding:26px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.footer-grid{display:grid;gap:18px}.footer-grid p{margin:0}.footer-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
+.sticky[hidden]{display:none}.sticky{position:fixed;inset-inline:0;bottom:0;z-index:20;padding:9px 16px calc(9px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fffdf9fa}.sticky-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1080px;margin:auto}.sticky strong{display:block;font-size:19px;line-height:1.3}.sticky small{display:block;font-size:11px;color:var(--muted)}.sticky .btn{min-height:47px;padding:10px 15px;font-size:13px}
+.skip{position:absolute;top:-100px}.skip:focus{top:0;z-index:50;background:white;padding:12px}dialog{width:min(94vw,760px);max-height:92dvh;padding:16px;border:0;border-radius:12px;background:var(--paper)}dialog::backdrop{background:#171021cc}dialog img{width:auto;max-width:100%;max-height:75dvh;margin:auto}.close{display:block;min-height:44px;margin:0 0 12px auto;padding:9px 14px;border:1px solid var(--line);border-radius:6px;background:white}body.modal-open{overflow:hidden}#checkoutDialog{max-width:430px}
+@media(min-width:650px){.benefit-grid,.steps{grid-template-columns:repeat(3,minmax(0,1fr))}.footer-grid{grid-template-columns:1fr 1fr}.inline-action .btn,.closing .btn{width:auto}.case-route{max-width:720px}.gallery{gap:20px}}
+@media(min-width:900px){body{padding-bottom:0}.wrap{width:min(1080px,calc(100% - 80px))}.nav{min-height:76px}.hero{grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;padding:36px 0 52px}.hero-media{padding:24px}.section{padding:64px 0}.proof-grid{grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}.split{grid-template-columns:1fr 1fr;gap:45px;align-items:center}.offer-grid{grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}.offer-card{padding:32px}.sticky{display:none}.case-band{padding:36px 0}}
+@media(max-width:355px){.wrap{width:calc(100% - 28px)}.hero-media{padding:16px}.offer-card{padding:20px}.btn{font-size:14px}.sticky{padding-inline:12px}.sticky .btn{font-size:12px;padding-inline:12px}.case-route{gap:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 
 <!-- Script de UTMs fornecido pela UTMify -->
@@ -200,637 +55,201 @@ body.modal-open{overflow:hidden}
 <body>
 <a class="skip" href="#main">Ir al contenido</a>
 
-<div class="top">HALLOWEEN EN EQUIPO · PDF EN ESPAÑOL</div>
+<div class="top">UNA MISIÓN DE HALLOWEEN PARA RESOLVER EN EQUIPO</div>
 
 <header class="wrap nav">
   <a class="brand" href="#main">VILLA LUNA</a>
-  <a class="navlink" href="#comprar">Ver qué incluye</a>
+  <a class="navlink" href="#incluye">Qué incluye</a>
 </header>
 
 <main id="main">
 <section class="wrap hero" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <span class="eyebrow">
-      Una aventura para compartir, sin pantallas al jugar
-    </span>
-
-    <h1 id="hero-title">
-      Este Halloween,<br>
-      tus niños son<br>
-      <span class="accent">los detectives.</span>
-    </h1>
-
-    <p class="intro">
-      Una calabaza desaparecida. Cuatro sospechosos.
-      Un equipo que debe unir las pistas para resolver el misterio.
-    </p>
-
-    <p class="intro">
-      <strong>Tú no tienes que inventar la actividad.</strong>
-      Recibes la historia, las pruebas y una guía con pistas
-      y respuestas para acompañarlos.
-    </p>
-
+    <span class="eyebrow">Misterio para niños · PDF en español para imprimir</span>
+    <h1 id="hero-title">Este Halloween,<br>tus niños son<br><span class="accent">los detectives.</span></h1>
+    <p class="intro">La calabaza del desfile ha desaparecido. Hay cuatro sospechosos, testimonios que comparar y un código por descubrir.</p>
+    <p class="intro"><strong>Tú preparas 10 hojas. Ellos conectan las pistas.</strong> Recibes la historia, el juego y una guía con respuestas para acompañarlos.</p>
     <div class="hero-action">
-      <p class="price-line">US$9.99 · Pago único</p>
-      <a class="btn"
-         href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-         data-checkout-link>
-        Quiero preparar nuestra misión
-        <span aria-hidden="true">→</span>
-      </a>
-      <p class="hero-meta">
-        PDF para imprimir · Pago en Hotmart · Sin envío físico
-      </p>
+      <p class="price-line">US$9.99 <span>Pago único · Kit digital</span></p>
+      <a class="btn" href="https://pay.hotmart.com/R108013081C?checkoutMode=10" data-checkout-link>Quiero el caso completo →</a>
+      <p class="hero-meta">Pago en Hotmart · Sin envío físico</p>
       <p class="note">Moneda local, impuestos y total final en el checkout.</p>
     </div>
-
-    <a class="hero-secondary" href="#muestras">Mira las páginas reales antes de elegir ↓</a>
-
-    <div class="tags">
-      <span>10 hojas por equipo</span>
-      <span>Guía y soluciones</span>
-      <span>A4 y Carta</span>
-    </div>
+    <a class="hero-secondary" href="#muestras">Ver las páginas reales del juego ↓</a>
+    <div class="tags"><span>Guía y soluciones</span><span>A4 y Carta</span><span>Color y económica</span></div>
   </div>
+  <figure class="hero-media">
+    <div class="dossier-label"><span>Villa Luna · Archivo del caso</span><span>Prueba B1</span></div>
+    <button class="sheet-button" type="button" data-preview="assets/page-2-fa2c73b3c9.webp" data-alt="Página real del kit: las fichas de Nube, Teo, Ada y Leo" aria-label="Ampliar la página real de los cuatro sospechosos">
+      <img src="assets/page-2-fa2c73b3c9.webp" width="700" height="906" fetchpriority="high" decoding="async" alt="Fichas reales del PDF con Nube, Teo, Ada y Leo y sus características">
+    </button>
+    <figcaption>Cuatro sospechosos. ¿Qué pistas los distinguen?<span>Página real del PDF · Toca para ampliar</span></figcaption>
+  </figure>
+</section>
 
-  <div class="hero-media">
-    <picture>
-      <source media="(min-width:900px)"
-              sizes="340px"
-              srcset="assets/cover-800-e7d44e2be5.webp 800w,
-                      assets/cover-1200-8026f2e9da.webp 1200w">
-      <img src="assets/cover-400-8f23c8afff.webp"
-           srcset="assets/cover-400-8f23c8afff.webp 400w,
-                   assets/cover-640-8a83fee944.webp 640w"
-           sizes="(min-width:400px) 340px, calc(100vw - 68px)"
-           width="1122"
-           height="1402"
-           fetchpriority="high"
-           decoding="async"
-           alt="Mockup de la portada del kit digital El caso de la calabaza desaparecida">
-    </picture>
-    <div>
-      <h3>El caso de la calabaza desaparecida</h3>
-      <p>
-        24 páginas con juego, guía y accesorios.
-        Incluye un segundo caso breve.
-      </p>
-      <p>
-        Producto digital. La imagen es un mockup;
-        no se envía un libro.
-      </p>
-    </div>
+<section class="case-band" aria-labelledby="case-title">
+  <div class="wrap">
+    <span class="eyebrow">El caso de la calabaza desaparecida</span>
+    <h2 id="case-title">Alguien la movió.<br>Tu equipo tendrá que demostrar quién.</h2>
+    <p>La fiesta de Villa Luna está preparada, pero falta su gran calabaza. Mara entrega al equipo los registros de la tarde: una hora, varias versiones y una ruta por reconstruir.</p>
+    <ol class="case-route">
+      <li><span>01 · OBSERVAR</span>¿Qué testimonio encaja?</li>
+      <li><span>02 · CONECTAR</span>¿Quién coincide con las pruebas?</li>
+      <li><span>03 · RESOLVER</span>¿Dónde está y cuál es el código?</li>
+    </ol>
   </div>
 </section>
 
-<div class="trustline">
-  <div class="wrap">
-    <div>
-      <strong>Imprime</strong>
-      <span>10 hojas del caso principal</span>
-    </div>
-    <div>
-      <strong>Prepara</strong>
-      <span>La guía indica el orden</span>
-    </div>
-    <div>
-      <strong>Comparte</strong>
-      <span>Un adulto acompaña al equipo</span>
-    </div>
-  </div>
-</div>
-
-<section class="section wrap" id="muestras">
+<section class="section wrap" id="muestras" aria-labelledby="samples-title">
   <div class="head">
-    <span class="eyebrow">Mira cómo funciona antes de comprar</span>
-    <h2>
-      No basta con adivinar.<br>
-      Hay que conectar las pruebas.
-    </h2>
-    <p>
-      El equipo compara testimonios y personajes, sigue una ruta
-      y ordena un código. Prueba esta pequeña deducción con
-      una página real del kit.
-    </p>
+    <span class="eyebrow">Abre el expediente antes de comprar</span>
+    <h2 id="samples-title">Una oreja triangular no basta.<br>Hace falta otra pista.</h2>
+    <p>Dos personajes comparten ese rasgo. El equipo debe cruzarlo con el transporte y comprobar las marcas. Así funciona la investigación: cada respuesta necesita pruebas.</p>
   </div>
-
   <div class="proof-grid">
     <div class="proof-real">
-      <button type="button"
-              data-preview="assets/page-2-fa2c73b3c9.webp"
-              data-alt="Página original con las fichas de los cuatro ayudantes"
-              aria-label="Ampliar las fichas reales de los personajes">
-        <img src="assets/page-2-fa2c73b3c9.webp"
-             width="700" height="906"
-             loading="lazy" decoding="async"
-             alt="Página real: compara los rasgos de Nube, Teo, Ada y Leo">
+      <button type="button" data-preview="assets/page-2-fa2c73b3c9.webp" data-alt="Fichas originales de los cuatro ayudantes" aria-label="Ampliar las fichas de los personajes">
+        <img src="assets/page-2-fa2c73b3c9.webp" width="700" height="906" loading="lazy" decoding="async" alt="Muestra real de las fichas que compara el equipo">
       </button>
-      <div>
-        <h3>Las fichas que recibe tu equipo</h3>
-        <p>
-          Una sola característica no basta.
-          Observa las orejas y el transporte de cada ayudante.
-        </p>
-        <button type="button" class="tap"
-                data-preview="assets/page-2-fa2c73b3c9.webp"
-                data-alt="Fichas originales de los cuatro ayudantes">
-          Toca para ampliar ↗
+      <h3>Estas son las fichas que van a comparar.</h3>
+      <p>Nube, Teo, Ada y Leo tienen rasgos en común. Elegir por una sola característica puede llevar a una conclusión equivocada.</p>
+      <button type="button" class="tap" data-preview="assets/page-2-fa2c73b3c9.webp" data-alt="Fichas originales de los personajes">Ampliar la página real ↗</button>
+    </div>
+    <div class="evidence-copy">
+      <h3>Del primer testimonio al informe final.</h3>
+      <p>Los cuatro expedientes se entregan en orden. Las hojas anteriores siguen siendo útiles: el equipo construye la solución paso a paso.</p>
+      <ul class="evidence-list">
+        <li><strong>A · El momento</strong>Reconstruyen la hora y eligen el testimonio que corresponde.</li>
+        <li><strong>B · El transporte</strong>Comparan personajes y comprueban una marca.</li>
+        <li><strong>C · La ruta</strong>Leen el plano y descartan caminos que no sirven.</li>
+        <li><strong>D · El cierre</strong>Calculan las claves, ordenan el código y presentan su conclusión.</li>
+      </ul>
+      <details class="demo">
+        <summary>¿Quieres probar? Abre una pequeña deducción.</summary>
+        <div class="demo-content">
+          <h3>Orejas triangulares + bolsa.</h3>
+          <p>Mira las fichas: ¿quién cumple las dos características?</p>
+          <div class="demo-options" role="group" aria-label="Elige el ayudante">
+            <button type="button" data-demo="nube" aria-pressed="false">Nube</button>
+            <button type="button" data-demo="teo" aria-pressed="false">Teo</button>
+            <button type="button" data-demo="ada" aria-pressed="false">Ada</button>
+            <button type="button" data-demo="leo" aria-pressed="false">Leo</button>
+          </div>
+          <p class="demo-result" id="demoResult" role="status" aria-live="polite">Elige una respuesta para comprobar tu deducción.</p>
+          <p class="note">Este ejemplo usa otras pistas y no revela la solución del caso principal.</p>
+        </div>
+      </details>
+      <div class="gallery" aria-label="Más páginas reales del kit">
+        <button class="preview" type="button" data-preview="assets/page-1-d8e002b9b5.webp" data-alt="Página real: mapa de las cuatro etapas">
+          <img src="assets/page-1-d8e002b9b5.webp" width="700" height="906" loading="lazy" decoding="async" alt="Mapa de los cuatro expedientes">
+          <span>El recorrido del caso ↗</span>
+        </button>
+        <button class="preview" type="button" data-preview="assets/page-3-9bdd8e926e.webp" data-alt="Página real: invitación y distintivos opcionales">
+          <img src="assets/page-3-9bdd8e926e.webp" width="700" height="906" loading="lazy" decoding="async" alt="Invitación y distintivos imprimibles del kit">
+          <span>Invitación y distintivos ↗</span>
         </button>
       </div>
     </div>
-
-    <div class="demo">
-      <span class="eyebrow">Prueba una deducción</span>
-      <h3>Orejas triangulares + bolsa.</h3>
-      <p>
-        Mira las fichas originales:
-        ¿quién tiene orejas triangulares y usa bolsa?
-      </p>
-
-      <div class="demo-options" role="group" aria-label="Elige el ayudante">
-        <button type="button" data-demo="nube" aria-pressed="false">Nube</button>
-        <button type="button" data-demo="teo" aria-pressed="false">Teo</button>
-        <button type="button" data-demo="ada" aria-pressed="false">Ada</button>
-        <button type="button" data-demo="leo" aria-pressed="false">Leo</button>
-      </div>
-
-      <p class="demo-result" id="demoResult" role="status" aria-live="polite">
-        Elige una respuesta para comprobar tu deducción.
-      </p>
-      <p class="note">
-        Ejemplo de deducción. El caso principal usa otras pistas;
-        su solución no se revela aquí.
-      </p>
-    </div>
   </div>
-
-  <div class="gallery">
-    <button class="preview" type="button"
-            data-preview="assets/page-1-d8e002b9b5.webp"
-            data-alt="Página original con las cuatro etapas de investigación">
-      <img src="assets/page-1-d8e002b9b5.webp"
-           width="700" height="906"
-           loading="lazy" decoding="async"
-           alt="Etapas de la investigación">
-      <span>Las cuatro etapas ↗</span>
-    </button>
-
-    <button class="preview" type="button"
-            data-preview="assets/page-2-fa2c73b3c9.webp"
-            data-alt="Página original con las fichas de los cuatro ayudantes">
-      <img src="assets/page-2-fa2c73b3c9.webp"
-           width="700" height="906"
-           loading="lazy" decoding="async"
-           alt="Fichas originales de los personajes">
-      <span>Los personajes ↗</span>
-    </button>
-
-    <button class="preview" type="button"
-            data-preview="assets/page-3-9bdd8e926e.webp"
-            data-alt="Página original de invitación y distintivos">
-      <img src="assets/page-3-9bdd8e926e.webp"
-           width="700" height="906"
-           loading="lazy" decoding="async"
-           alt="Invitación y distintivos originales">
-      <span>Los accesorios ↗</span>
-    </button>
-  </div>
-
-  <p class="note">
-    Desliza para ver las muestras y toca para ampliar.
-    El ejemplo no revela la solución del caso principal.
-  </p>
-
-  <div class="inline-action">
-    <a class="btn" href="#comprar">Ver todo lo que recibo →</a>
-  </div>
+  <div class="inline-action"><a class="btn" href="#comprar">Ver el kit completo · US$9.99 →</a></div>
 </section>
 
 <section class="section soft">
   <div class="wrap split">
     <div>
-      <span class="eyebrow">Un plan con algo que resolver juntos</span>
-      <h2>
-        Menos improvisar.<br>
-        Más compartir la aventura.
-      </h2>
-      <p class="intro">
-        Reúne al equipo alrededor de una mesa y lee la historia.
-        La calabaza del desfile ha desaparecido: tendrán que
-        comparar las pruebas para descubrir quién la movió,
-        dónde está y cuál es el código.
-      </p>
+      <span class="eyebrow">Tu papel en la investigación</span>
+      <h2>Tú lees el comienzo.<br>Ellos siguen las pistas.</h2>
+      <p class="intro">Reúne al equipo y cuenta lo que ocurrió en la plaza. Entrega el expediente A y escucha sus hipótesis: ¿qué vieron los testigos?, ¿qué datos coinciden?</p>
       <ul class="check">
-        <li>Una historia con un objetivo concreto.</li>
-        <li>Cuatro expedientes que se conectan.</li>
-        <li>Ayuda para el adulto si el equipo se atasca.</li>
+        <li><strong>Si dudan:</strong> tienes pistas graduadas para ayudar sin contarles toda la solución.</li>
+        <li><strong>Si responden:</strong> la guía te permite comprobar sus pruebas y entregar la siguiente fase.</li>
+        <li><strong>Cuando cierran el caso:</strong> lees el desenlace y puedes entregarles su diploma.</li>
       </ul>
     </div>
-
-    <div>
+    <figure>
       <picture>
-        <source media="(min-width:900px)"
-                srcset="assets/family-800-9c0ad02412.webp 800w,
-                        assets/family-1200-5eea919ca7.webp 1200w"
-                sizes="530px">
-        <img src="assets/family-400-43eca7ba7d.webp"
-             srcset="assets/family-400-43eca7ba7d.webp 400w,
-                     assets/family-640-95454093ed.webp 640w"
-             sizes="(min-width:900px) 530px, calc(100vw - 36px)"
-             width="1536" height="1024"
-             loading="lazy" decoding="async"
-             class="rounded"
-             alt="Escena ilustrativa de dos niños comparando las fichas del caso con una adulta">
+        <source media="(min-width:900px)" srcset="assets/family-800-9c0ad02412.webp 800w, assets/family-1200-5eea919ca7.webp 1200w" sizes="520px">
+        <img src="assets/family-400-43eca7ba7d.webp" srcset="assets/family-400-43eca7ba7d.webp 400w, assets/family-640-95454093ed.webp 640w" sizes="(min-width:900px) 520px, calc(100vw - 36px)" width="1536" height="1024" loading="lazy" decoding="async" class="rounded" alt="Escena ilustrativa de una adulta acompañando a dos niños con las pruebas impresas">
       </picture>
-      <p class="note">
-        Escena ilustrativa de uso.
-        Papel, lápices y decoración no incluidos.
-      </p>
-    </div>
+      <figcaption class="note">Escena ilustrativa de uso. Papel, lápices y decoración no incluidos.</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="section wrap">
+<section class="section wrap" id="incluye" aria-labelledby="included-title">
   <div class="head">
-    <span class="eyebrow">Esto forma parte de la compra principal</span>
-    <h2>
-      La misión completa.<br>
-      Y el apoyo para prepararla.
-    </h2>
+    <span class="eyebrow">Lo que recibes por US$9.99</span>
+    <h2 id="included-title">Las pruebas para ellos.<br>Las respuestas para ti.</h2>
+    <p>Un kit de 24 páginas que reúne el caso, la preparación y el cierre. El contenido del juego está incluido en la compra principal.</p>
   </div>
-
   <div class="benefit-grid">
-    <article class="benefit">
-      <h3>El juego</h3>
-      <p>
-        Cuatro expedientes con testimonios, fichas, plano y claves.
-        El equipo compara las pruebas hasta construir su conclusión.
-      </p>
-    </article>
-
-    <article class="benefit">
-      <h3>Tu guía</h3>
-      <p>
-        Inicio paso a paso, orden de entrega, pistas graduadas,
-        soluciones y desenlace.
-        No necesitas improvisar las respuestas.
-      </p>
-    </article>
-
-    <article class="benefit">
-      <h3>Los detalles</h3>
-      <p>
-        Invitación, distintivos, roles, etiquetas y diploma.
-        Son opcionales: el juego funciona también sin recortes.
-      </p>
-    </article>
+    <article class="benefit"><span class="eyebrow">Para investigar</span><h3>Los cuatro expedientes</h3><p>Historia, testimonios, fichas, plano, claves e informe final. Preparas las 10 hojas básicas del equipo y entregas cada fase cuando corresponde.</p></article>
+    <article class="benefit"><span class="eyebrow">Para acompañar</span><h3>La guía del adulto</h3><p>Instrucciones, pistas graduadas, soluciones y desenlace. Sabes qué entregar, qué comprobar y cómo ayudar si se atascan.</p></article>
+    <article class="benefit"><span class="eyebrow">Para ambientar</span><h3>Los detalles de la misión</h3><p>Invitación, distintivos, roles, etiquetas y diploma. Puedes usarlos para preparar la ocasión; recortarlos es opcional.</p></article>
   </div>
-
-  <div class="details-box">
-    <h3>También incluido: «El farol de la biblioteca»</h3>
-    <p>
-      Un segundo caso breve con nuevas pistas y otra respuesta,
-      reutilizando las fichas y el plano.
-      Se prepara con una hoja adicional.
-    </p>
-  </div>
-
-  <p class="note">
-    24 páginas de contenido. Los cuatro PDFs completos son
-    versiones del mismo kit: A4 y Carta, color y económica.
-  </p>
+  <div class="details-box"><h3>Y después, otro objeto desaparece…</h3><p>También incluye <strong>«El farol de la biblioteca»</strong>: un segundo caso breve con nuevos datos y otra solución. Usa una hoja adicional y reutiliza las fichas, el plano y los valores del primer caso.</p></div>
+  <p class="note">Recibes el mismo kit en A4 y Carta, en color y versión económica. Son cuatro versiones de las mismas 24 páginas, no cuatro juegos distintos.</p>
 </section>
 
-<section class="section soft" id="preparar">
+<section class="section soft" id="preparar" aria-labelledby="prepare-title">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Así lo llevas a la mesa</span>
-      <h2>
-        Imprime, prepara<br>
-        y empieza la misión.
-      </h2>
-    </div>
-
+    <div class="head"><span class="eyebrow">De la descarga a la mesa</span><h2 id="prepare-title">No necesitas inventar las pruebas.<br>Solo preparar el caso.</h2></div>
     <div class="steps">
-      <div class="step">
-        <span class="num">1</span>
-        <div>
-          <h3>Imprime 10 hojas</h3>
-          <p>
-            Descarga el kit tras aprobarse el pago.
-            Elige A4 o Carta e imprime las 10 hojas del equipo
-            indicadas en EMPIEZA-AQUI.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <span class="num">2</span>
-        <div>
-          <h3>Separa los expedientes</h3>
-          <p>
-            Agrupa las hojas en A, B, C y D siguiendo la guía.
-            Guarda las pistas y las soluciones para ti.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <span class="num">3</span>
-        <div>
-          <h3>Lee la historia y juega</h3>
-          <p>
-            Presenta el misterio y entrega el primer expediente.
-            Acompaña al equipo con las pistas de la guía
-            cuando necesite ayuda.
-          </p>
-        </div>
-      </div>
+      <div class="step"><span class="num">1</span><div><h3>Imprime 10 hojas</h3><p>Tras aprobarse el pago, descarga el kit. Elige A4 o Carta y sigue la selección de hojas de EMPIEZA-AQUI. Puedes usar la versión económica.</p></div></div>
+      <div class="step"><span class="num">2</span><div><h3>Separa A, B, C y D</h3><p>Agrupa las hojas como indica la guía. Guarda las soluciones para ti y deja el expediente A listo para el equipo.</p></div></div>
+      <div class="step"><span class="num">3</span><div><h3>Lee la historia</h3><p>Presenta la desaparición y empieza con la primera pista. La guía te acompaña hasta el desenlace; puedes hacer pausas entre fases.</p></div></div>
     </div>
-
-    <p class="materials">
-      <strong>Necesitas impresora, papel y lápices.</strong>
-      Sobres y recortes son opcionales.
-      Consulta la guía en pantalla; no necesitas imprimirla.
-    </p>
+    <p class="materials"><strong>Necesitas impresora, papel y lápices.</strong> Sin candados ni recortes obligatorios. Consulta la guía en pantalla y juega con las hojas impresas, sin app ni conexión durante la actividad.</p>
+    <div class="fit-note"><h3>¿Encaja con tus niños?</h3><p>El caso combina lectura, comparación de datos, coordenadas y cuentas sencillas de suma, resta y reparto. Un adulto acompaña y puede leer las consignas. <a href="#muestras">Revisa las páginas reales</a> para valorar el nivel de tu grupo.</p></div>
   </div>
 </section>
 
-<section class="section wrap">
-  <div class="head">
-    <span class="eyebrow">¿Encaja con tu grupo?</span>
-    <h2>
-      Una investigación acompañada,<br>
-      al ritmo de tu equipo.
-    </h2>
-    <p>
-      Las pruebas combinan lectura, comparación de datos,
-      un plano y cálculos.
-      Revisa las muestras para valorar si el nivel encaja
-      con tus niños.
-    </p>
-  </div>
-
-  <div class="benefit-grid">
-    <article class="benefit">
-      <h3>Para compartir</h3>
-      <p>
-        En tu hogar o con tu propio grupo escolar.
-        Prepara una copia de las hojas por equipo
-        si organizas varios.
-      </p>
-    </article>
-
-    <article class="benefit">
-      <h3>Con ayuda adulta</h3>
-      <p>
-        La guía te ayuda a apoyar la lectura y dar una pista
-        cada vez, sin revelar toda la respuesta.
-      </p>
-    </article>
-
-    <article class="benefit">
-      <h3>Sin presión de tiempo</h3>
-      <p>
-        Puedes jugar por fases, hacer una pausa y continuar
-        cuando tu equipo esté listo.
-      </p>
-    </article>
-  </div>
-</section>
-
-<section class="section offer" id="oferta">
+<section class="section offer" id="oferta" aria-labelledby="offer-title">
   <div class="wrap offer-grid">
     <div class="offer-summary">
-      <span class="eyebrow">Una compra · La misión completa</span>
-      <h2>
-        Ya tienes el plan.<br>
-        Reúne a tus detectives.
-      </h2>
-      <p>
-        Historia, pruebas y respuestas en un solo kit.
-        Tú preparas las hojas; juntos dan vida a Villa Luna.
-      </p>
-      <ul class="check">
-        <li>Una misión que resolver juntos, sin pantallas al jugar.</li>
-        <li>Las pistas y respuestas listas para acompañar al equipo.</li>
-        <li>El caso completo: los complementos no son necesarios.</li>
-      </ul>
-      <p class="small">
-        La decoración adicional y las láminas para colorear
-        del checkout son opcionales.
-        No hacen falta para resolver el juego.
-      </p>
+      <span class="eyebrow">El caso completo · Una sola compra</span>
+      <h2 id="offer-title">Que la próxima pista<br>esté en su mesa.</h2>
+      <p>Recibe «El caso de la calabaza desaparecida» con el material del equipo y la guía que necesitas para dirigir la investigación.</p>
+      <ul class="check"><li>Una historia que termina con una explicación apoyada en pruebas.</li><li>Pistas y soluciones para acompañarlos sin improvisar respuestas.</li><li>Permiso para imprimir para tu hogar o tu propio grupo escolar.</li></ul>
+      <p class="small">Si organizas varios equipos, prepara una copia de las hojas para cada uno.</p>
     </div>
-
     <div class="offer-card" id="comprar">
-      <span class="eyebrow">Kit digital en español</span>
+      <span class="eyebrow">PDF en español · Descarga digital</span>
       <h3 class="offer-title">El caso de la calabaza desaparecida</h3>
       <div class="price">US$9.99 <span>USD</span></div>
       <p>Pago único. Sin suscripción.</p>
-
-      <ul class="check">
-        <li>24 páginas con 4 expedientes de investigación.</li>
-        <li>Guía del adulto, pistas graduadas y soluciones.</li>
-        <li>Archivo básico de 10 hojas por equipo.</li>
-        <li>Invitación, distintivos, roles y diploma.</li>
-        <li>Segundo caso breve: «El farol de la biblioteca».</li>
-        <li>A4 y Carta, en color y versión económica.</li>
-        <li>Permiso para tu hogar o tu propio grupo escolar.</li>
-      </ul>
-
-      <a class="btn"
-         href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-         data-checkout-link>
-        Quiero el kit completo →
-      </a>
-
-      <p class="payment">Pago procesado por Hotmart.</p>
-
+      <ul class="check"><li>Caso principal con cuatro expedientes e informe final.</li><li>Guía del adulto, pistas, soluciones y desenlace.</li><li>Invitación, distintivos, roles, etiquetas y diploma.</li><li>Segundo caso breve: «El farol de la biblioteca».</li><li>24 páginas, en A4 y Carta, color y económica.</li></ul>
+      <a class="btn" href="https://pay.hotmart.com/R108013081C?checkoutMode=10" data-checkout-link>Quiero el caso completo →</a>
+      <p class="payment">Continúas al pago en Hotmart.</p>
       <div class="offer-facts">
-        <p id="accessInfo">
-          Tras aprobarse el pago, recibirás por email las
-          instrucciones de acceso de Hotmart.
-          Descarga el kit y empieza por EMPIEZA-AQUI.
-        </p>
-        <p>
-          <strong>PDF para imprimir. Sin envío físico.</strong>
-        </p>
-        <p class="tax-note">
-          Precio base en USD.
-          La moneda local, los impuestos y el total aplicable
-          se muestran en el checkout antes de pagar.
-        </p>
+        <p id="accessInfo">Tras aprobarse el pago, Hotmart envía las instrucciones de acceso al email de la compra. Descarga el kit y abre EMPIEZA-AQUI.</p>
+        <p><strong>Producto digital para imprimir. Sin envío físico.</strong></p>
+        <p>El kit principal incluye lo necesario para resolver el caso. La decoración adicional y las láminas para colorear del checkout son opcionales y se cobran por separado.</p>
+        <p class="tax-note">Precio base en USD. La moneda local, los impuestos y el total final se muestran en el checkout antes de pagar.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section wrap faq" id="preguntas">
-  <span class="eyebrow">Resuelve tus dudas</span>
-  <h2>Antes de preparar la misión.</h2>
-
-  <details>
-    <summary>¿Es adecuado para mi equipo?</summary>
-    <p>
-      El juego combina lectura, comparación de testimonios,
-      un plano y cálculos para resolver un código.
-      Un adulto acompaña, puede leer las consignas y adapta
-      la ayuda. Revisa las muestras para valorar si encaja
-      con el nivel de tu grupo.
-      No es una actividad para dejar a los niños solos.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Cómo recibo los archivos?</summary>
-    <p>
-      La compra se procesa en Hotmart.
-      Tras aprobarse el pago, sigue las instrucciones de acceso
-      enviadas al email que indiques en el checkout.
-      Descarga los archivos y abre primero EMPIEZA-AQUI.
-      Revisa también la carpeta de correo no deseado.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Necesito los complementos del checkout?</summary>
-    <p>
-      No. El kit principal incluye todo el contenido del caso,
-      la guía, las pistas y las soluciones.
-      La decoración adicional y las láminas para colorear
-      se ofrecen por separado y son opcionales.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿En qué moneda pagaré?</summary>
-    <p>
-      El precio base es US$9.99.
-      Hotmart puede mostrar su conversión a la moneda de tu país
-      y los impuestos aplicables.
-      Revisa el importe final antes de confirmar el pago.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Y si necesito ayuda o un reembolso?</summary>
-    <p>
-      Consulta los datos de soporte y las condiciones de reembolso
-      en tu compra de Hotmart.
-      El plazo y las condiciones aplicables se muestran durante
-      la compra. Conserva el email de confirmación para
-      localizar tu pedido.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Qué recibo exactamente?</summary>
-    <p>
-      Un kit digital de 24 páginas en cuatro PDFs:
-      Carta color, Carta económica, A4 color y A4 económica.
-      Son versiones del mismo juego, no cuatro juegos diferentes.
-      También recibes archivos abreviados en versión económica,
-      listos para imprimir las 10 hojas del equipo,
-      y la hoja del caso extra.
-      Incluye el caso principal, guía para el adulto,
-      accesorios y un segundo caso breve.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Me llegará un libro a casa?</summary>
-    <p>
-      No. El libro de las imágenes es un mockup del producto
-      digital. Recibes archivos PDF para imprimir;
-      no incluye papel, lápices, decoración ni envío físico.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Hace falta que un adulto acompañe?</summary>
-    <p>
-      Sí. Un adulto acompaña el juego, apoya la lectura cuando
-      sea necesario y adapta las pistas al grupo.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Tengo que imprimir las 24 páginas?</summary>
-    <p>
-      No. El caso principal se prepara con 10 hojas por equipo.
-      Incluimos esos archivos ya separados en versión económica,
-      para Carta y A4. Consulta la guía del adulto sin imprimirla.
-      El dibujo, la tabla adicional, los accesorios y el diploma
-      son opcionales; el caso extra requiere una hoja más
-      y reutiliza material del primero.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Necesito recortar o comprar accesorios?</summary>
-    <p>
-      No para el modo básico.
-      Necesitas impresora, papel y lápices.
-      Los sobres, recortes y accesorios son opcionales;
-      no hacen falta candados ni premios.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Cuánto dura la actividad?</summary>
-    <p>
-      La duración depende de la lectura y de la ayuda del adulto.
-      Puedes jugar por fases, hacer pausas y ajustar el ritmo
-      al equipo. No necesitas imponer una cuenta atrás.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Necesitamos Internet, una app o candados?</summary>
-    <p>
-      No durante el juego. Descarga e imprime antes.
-      Las pruebas y respuestas están en el PDF;
-      el adulto comprueba el código y no se encierra a nadie.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Qué hago si no encuentran una respuesta?</summary>
-    <p>
-      La guía incluye pistas graduadas y explicaciones de
-      las soluciones. Puedes leer las consignas y dar apoyo
-      sin penalizaciones.
-    </p>
-  </details>
-
-  <details>
-    <summary>¿Puedo usarlo con mi grupo escolar?</summary>
-    <p>
-      Sí. El permiso permite imprimir para tu hogar o tu propio
-      grupo escolar. Si organizas varios equipos, prepara
-      una copia de sus hojas para cada uno.
-      No se permite revender ni distribuir los archivos.
-    </p>
-  </details>
+<section class="section wrap faq" id="preguntas" aria-labelledby="faq-title">
+  <span class="eyebrow">Antes de abrir el caso</span><h2 id="faq-title">Lo que necesitas saber<br>para elegir.</h2>
+  <details><summary>¿Qué recibo y cómo accedo?</summary><p>Recibes un kit digital de 24 páginas en cuatro versiones del mismo contenido: A4 y Carta, color y económica. Incluye el caso principal, la guía, los accesorios y el segundo caso breve. Tras aprobarse el pago, sigue las instrucciones de acceso de Hotmart enviadas al email de compra. Revisa también el correo no deseado.</p></details>
+  <details><summary>¿Cómo sé si el nivel encaja con mi grupo?</summary><p>Revisa las <a href="#muestras">muestras reales</a>: hay lectura, comparación de testimonios, un plano con coordenadas y cuentas sencillas. El adulto puede leer las consignas y adaptar la ayuda. No hay una duración fija; puedes hacer pausas y continuar por fases.</p></details>
+  <details><summary>¿Tengo que imprimir las 24 páginas?</summary><p>No. Para el caso principal, imprime las 10 hojas del equipo indicadas en la guía. Puedes consultar las instrucciones y soluciones del adulto en pantalla. Los accesorios son opcionales; el caso extra usa una hoja más y reutiliza materiales.</p></details>
+  <details><summary>¿Necesito recortar, comprar candados o usar una app?</summary><p>No para el modo básico. Necesitas impresora, papel y lápices. Recortes, sobres y decoración son opcionales. Descarga e imprime antes: durante el juego no hace falta app ni conexión. Nadie está encerrado.</p></details>
+  <details><summary>¿Qué hago si no encuentran una respuesta?</summary><p>La guía incluye pistas graduadas: ofrece una y deja que vuelvan a intentarlo. También tienes las soluciones para comprobar cada fase. Un adulto acompaña la actividad; el kit no está pensado para dejar al grupo sin supervisión.</p></details>
+  <details><summary>¿Puedo imprimirlo para mi grupo escolar?</summary><p>Sí. La licencia permite usarlo en tu hogar o con tu propio grupo escolar. Si hay varios equipos, prepara sus respectivas hojas. No permite revender ni redistribuir los archivos.</p></details>
+  <details><summary>¿Tengo que comprar los complementos de Hotmart?</summary><p>No. El caso principal ya incluye historia, pruebas, guía, pistas y soluciones. La decoración adicional y las láminas para colorear son compras opcionales, separadas del precio base.</p></details>
+  <details><summary>¿Pagaré exactamente US$9.99?</summary><p>US$9.99 es el precio base en dólares. Hotmart puede mostrar moneda local e impuestos según el país. Revisa el total final y los complementos seleccionados antes de confirmar el pago.</p></details>
+  <details><summary>¿Dónde consulto soporte y reembolsos?</summary><p>Consulta las condiciones y el plazo de reembolso que se muestran durante la compra en Hotmart. Para un pedido realizado, usa los datos de soporte de tu compra y conserva el email de confirmación para localizarlo.</p></details>
 </section>
 
 <section class="section wrap closing separator">
-  <span class="eyebrow">Cuatro sospechosos. Un equipo. Una misión.</span>
-  <h2>
-    Este Halloween,<br>
-    una historia para vivir juntos.
-  </h2>
-  <p>Prepara las hojas y deja que empiece la investigación.</p>
-
-  <a class="btn"
-     href="https://pay.hotmart.com/R108013081C?checkoutMode=10"
-     data-checkout-link>
-    Quiero nuestra aventura · US$9.99 →
-  </a>
-
-  <p class="small">Producto digital en español · Pago único</p>
+  <span class="eyebrow">Villa Luna sigue buscando su calabaza</span>
+  <h2>Cuatro sospechosos.<br>Una mesa de detectives.<br>El siguiente paso lo prepara tu equipo.</h2>
+  <p>Imprime las pruebas, lee el comienzo y deja que sus hipótesis pongan en marcha la investigación.</p>
+  <a class="btn" href="https://pay.hotmart.com/R108013081C?checkoutMode=10" data-checkout-link>Quiero preparar la misión · US$9.99 →</a>
+  <p class="small">PDF en español · Pago único · Un adulto acompaña</p>
 </section>
 </main>
 
@@ -864,7 +283,7 @@ body.modal-open{overflow:hidden}
   <div class="sticky-inner">
     <div>
       <strong>US$9.99 <span style="font-size:11px">USD</span></strong>
-      <small>Kit digital · Pago único</small>
+      <small>PDF para imprimir · Precio base</small>
     </div>
 
     <a class="btn"
@@ -917,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function () {
       for (const [key, value] of new URLSearchParams(location.search)) {
         const allowed =
           key.startsWith('utm_') ||
-          ['fbclid', 'sck', 'src'].includes(key);
+          ['fbclid', 'sck', 'src', 'xcod'].includes(key);
 
         if (allowed && !url.searchParams.has(key)) {
           url.searchParams.set(key, value);
